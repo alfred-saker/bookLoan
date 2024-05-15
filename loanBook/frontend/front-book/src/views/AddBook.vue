@@ -1,0 +1,268 @@
+<template>
+    <Header/>
+    <div class="main_add_book">
+      <form @submit.prevent="submitForm" enctype="multipart/form-data">
+        <p class="alert alert-danger" style="padding: 1em;margin-top: 1em;" v-if="errors.wrong_fields">{{ errors.wrong_fields }}</p>
+        <!-- <p class="alert alert-danger" style="padding: 1em;margin-top: 1em;" v-if="error">{{ error }}</p> -->
+        <div class="row col-12" style="line-height: 2;" id="form_add_book">
+          <h2 class="fs-1">Add a new book</h2>
+
+          <div class="col-6">
+            <label for="">Author of book</label>
+            <input type="text" v-model="author_book" class="form-control" placeholder="Author of book" aria-label="Author of book" id="author_book" name="author_book">
+            <small v-if="errors.author_book" class="text-danger">{{ errors.author_book }}</small>
+          </div>
+          <div class="col-6">
+            <label for="">Title of book</label>
+            <input type="text" v-model="title_book" class="form-control" placeholder="Title of Book" aria-label="title book" id="title_book" name="title_book">
+            <small v-if="errors.title_book" class="text-danger">{{ errors.title_book }}</small>
+          </div>
+          <div class="col-6">
+            <label for="">Publication date</label>
+            <input type="date" v-model="year_publication" class="form-control" aria-label="year of publication" id="year_publication" name="year_publication">
+            <small v-if="errors.year_publication" class="text-danger">{{ errors.year_publication }}</small>
+          </div>
+          <div class="col-6">
+            <label for="">Gender book</label>
+            <select class="form-control" v-model="gender_book" aria-label="Gender book" id="gender_book" name="gender_book">
+              <option value="">Please select a gender of book</option>
+              <option value="Entrepreunariat">Entrepreunariat</option>
+              <option value="Economie">Economie</option>
+              <option value="Finance">Finance</option>
+              <option value="Chretien">Chretien</option>
+            </select>
+            <small v-if="errors.gender_book" class="text-danger">{{ errors.gender_book }}</small>
+          </div>
+          <div class="col-12">
+            <label for="">Type book</label>
+            <select class="form-control" v-model="type_book" aria-label="type_book" id="type_book" name="type_book" @change="showFileInput">
+              <option value="">Please select a type of book</option>
+              <option value="Numeric">Numeric book</option>
+              <option value="Paper">Paper Book</option>
+            </select>
+            <small v-if="errors.type_book" class="text-danger">{{ errors.type_book }}</small>
+          </div>
+         
+          <div class="col-12">
+            <label for="">Description of book</label>
+            <textarea  id="" v-model="description" cols="30" rows="3" class="form-control">Enter some description</textarea>
+            <small v-if="errors.description" class="text-danger">{{ errors.description }}</small>
+          </div>
+          <div class="col-6" v-if="type_book !== 'Paper'" >
+            <label for="">File of books</label>
+            <input type="file" name="file_book"  id="file_book" class="form-control" @change="validateFilePdf">
+            <small v-if="errors.file_book" class="text-danger">{{ errors.file_book }}</small>
+          </div>
+          <div class="col-6">
+            <label for="">Image of books</label>
+            <input type="file" name="image_book" id="image_book" class="form-control" @change="validateImage">
+            <small v-if="errors.image_book" class="text-danger">{{ errors.image_book }}</small>
+          </div>
+          <button type="submit" class="btn btn-outline-primary" style="margin-top: 1em;width: 100%;">Add book</button>
+        </div>
+      </form>
+    </div>
+    
+</template>
+<script>
+import Header from '@/components/header.vue';
+import axios from 'axios';
+import { toHandlers } from 'vue';
+import { useRoute } from 'vue-router';
+
+export default{
+  components: {
+    Header,
+  },
+  data(){
+    return{
+      author_book: '',
+      title_book: '',
+      year_publication: '',
+      gender_book: '',
+      type_book: '',
+      successMessage: '',
+      description:'',
+      file_book: null,
+      image_book: null,
+      display_input_file: false,
+      errors:{
+        author_book: '',
+        title_book: '',
+        year_publication: '',
+        description: '',
+        gender_book: '',
+        type_book: '',
+        status_book: '',
+        file_book: '',
+        image_book: '',
+        wrong_fields : ''
+      }
+    }
+  },
+  methods:{
+    showFileInput(){
+      if (this.type_book === 'Paper') {
+        this.display_input_file = false;
+      } else {
+        this.display_input_file = true;
+      }
+    },
+    validateFilePdf(event) {
+      const file_book = event.target.files[0];
+      // const maxSize = 5 * 1024 * 1024; // 5MB
+      const allowedTypes = ['application/pdf', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'text/plain'];
+      if (!file_book) {
+        this.errors.file_book = "Please select a file.";
+        return;
+      }
+
+      if (!allowedTypes.includes(file_book.type)) {
+        this.errors.file_book = "Only PDF, DOCX, and TXT files are allowed.";
+        return;
+      }
+
+      this.file_book = file_book
+      this.errors.file_book = ''
+
+    },
+    validateImage(event) {
+      const image = event.target.files[0];
+      const maxSize = 5 * 1024 * 1024; // 5MB
+      const allowedTypes = ['image/jpeg', 'image/png', 'image/jpg', 'image/svg'];
+      
+      if (!image) {
+        this.errors.image_book = "Please select an image.";
+        return;
+      }
+      
+      if (!allowedTypes.includes(image.type)) {
+        this.errors.image_book = "Only JPG, JPEG, SVG, and PNG files are allowed.";
+        return;
+      }
+      
+      if (image.size > maxSize) {
+        this.errors.image_book = "Image size exceeds the limit (5MB).";
+        return;
+      }
+      this.image_book = image
+      this.errors.image_book = ''
+      
+      console.log(this.file_book);
+      console.log(image);
+    },
+    async submitForm(){
+      this.clearErrors();
+      try {
+        if(this.isValidForm()){
+          let formData = new FormData();
+          console.log(this.isValidForm());
+
+          formData.append('user', localStorage.getItem('url'));
+          formData.append('author', this.author_book);
+          formData.append('title', this.title_book);
+          formData.append('year_publication', this.year_publication);
+          formData.append('gender', this.gender_book);
+          formData.append('type_book', this.type_book);
+          formData.append('status_book', true);
+          formData.append('description', this.description);
+          formData.append('picture_books', this.image_book);
+
+          if (this.type_book === 'Numeric') {
+            formData.append('pdf_file', this.file_book);
+          } 
+          if (this.type_book === 'Paper') {
+            formData.append('pdf_file', null);
+          } 
+          console.log(formData);
+          try {
+            const response = await axios.post('books/',formData,
+            {
+              headers: {
+                'Authorization': `token ${localStorage.getItem('token')}`,
+                'Content-Type': 'multipart/form-data'
+              }
+            }
+          );
+          console.log(response.data);
+          this.successMessage = "Book add with success😎"
+          this.$router.push('home');
+          } catch (error) {
+            if (error.response && error.response.data) {
+              this.errors.wrong_fields = "Something wrong, please fill the empty fields";
+            }
+            console.error('Error:', error.response ? error.response.data : error);
+          }
+        }
+      } catch (error) {
+        console.error('Erreur lors de la soumission du formulaire :', error);
+      }
+     
+    },
+
+    isValidForm() {
+      let valid = true;
+
+      if (!this.author_book.trim()) {
+        this.errors.author_book = "Author is required";
+        valid = false;
+      }
+      if (!this.title_book.trim()) {
+        this.errors.title_book = "Title is required";
+        valid = false;
+      }
+      if (!this.year_publication) {
+        this.errors.year_publication = "year of publication is required";
+        valid = false;
+      }
+      if (!this.description) {
+        this.errors.description = "Description is required";
+        valid = false;
+      }
+      if (!this.gender_book) {
+        this.errors.gender_book = "Gender is required";
+        valid = false;
+      }
+      if (!this.type_book) {
+        this.errors.type_book = "Type of book is required";
+        valid = false;
+      }
+      if (!this.file_book) {
+        this.errors.file_book = "File book is required";
+        valid = false;
+      }
+      if (!this.image_book) {
+        this.errors.image_book = "Image book is required";
+        valid = false;
+      }
+      return valid;
+    },
+
+    clearErrors() {
+      this.errors.author_book = '';
+      this.errors.title_book = '';
+      this.errors.quantity = '';
+      this.errors.gender_book = '';
+      this.errors.year_publication = '';
+      this.errors.type_book = '';
+      this.errors.status_book = '';
+      this.errors.image_book = '';
+      this.errors.file_book = '';
+      this.errors.wrong_fields = ''
+    }
+  }
+}
+</script>
+
+
+
+
+<style>
+  #form_add_book{
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .main_add_book{
+    height: 100vh;
+  }
+</style>
