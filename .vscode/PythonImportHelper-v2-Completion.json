@@ -1,211 +1,36 @@
 [
     {
-        "label": "uuid",
+        "label": "django.contrib.auth.models",
         "kind": 6,
         "isExtraImport": true,
-        "importPath": "uuid",
-        "description": "uuid",
-        "detail": "uuid",
+        "importPath": "django.contrib.auth.models",
+        "description": "django.contrib.auth.models",
+        "detail": "django.contrib.auth.models",
         "documentation": {}
     },
     {
-        "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
+        "label": "AbstractUser",
+        "importPath": "django.contrib.auth.models",
+        "description": "django.contrib.auth.models",
         "isExtraImport": true,
-        "detail": "django.db",
+        "detail": "django.contrib.auth.models",
         "documentation": {}
     },
     {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
+        "label": "User",
+        "importPath": "django.contrib.auth.models",
+        "description": "django.contrib.auth.models",
         "isExtraImport": true,
-        "detail": "django.db",
+        "detail": "django.contrib.auth.models",
         "documentation": {}
     },
     {
-        "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
+        "label": "django.contrib.auth.validators",
+        "kind": 6,
         "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
+        "importPath": "django.contrib.auth.validators",
+        "description": "django.contrib.auth.validators",
+        "detail": "django.contrib.auth.validators",
         "documentation": {}
     },
     {
@@ -218,38 +43,6 @@
         "documentation": {}
     },
     {
-        "label": "settings",
-        "importPath": "django.conf",
-        "description": "django.conf",
-        "isExtraImport": true,
-        "detail": "django.conf",
-        "documentation": {}
-    },
-    {
-        "label": "settings",
-        "importPath": "django.conf",
-        "description": "django.conf",
-        "isExtraImport": true,
-        "detail": "django.conf",
-        "documentation": {}
-    },
-    {
-        "label": "settings",
-        "importPath": "django.conf",
-        "description": "django.conf",
-        "isExtraImport": true,
-        "detail": "django.conf",
-        "documentation": {}
-    },
-    {
-        "label": "settings",
-        "importPath": "django.conf",
-        "description": "django.conf",
-        "isExtraImport": true,
-        "detail": "django.conf",
-        "documentation": {}
-    },
-    {
         "label": "django.utils.timezone",
         "kind": 6,
         "isExtraImport": true,
@@ -259,6 +52,111 @@
         "documentation": {}
     },
     {
+        "label": "uuid",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "uuid",
+        "description": "uuid",
+        "detail": "uuid",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
         "label": "admin",
         "importPath": "django.contrib",
         "description": "django.contrib",
@@ -283,7 +181,39 @@
         "documentation": {}
     },
     {
-        "label": "Borrow",
+        "label": "CustomUser",
+        "importPath": "backend.models",
+        "description": "backend.models",
+        "isExtraImport": true,
+        "detail": "backend.models",
+        "documentation": {}
+    },
+    {
+        "label": "BookVersion",
+        "importPath": "backend.models",
+        "description": "backend.models",
+        "isExtraImport": true,
+        "detail": "backend.models",
+        "documentation": {}
+    },
+    {
+        "label": "Rating",
+        "importPath": "backend.models",
+        "description": "backend.models",
+        "isExtraImport": true,
+        "detail": "backend.models",
+        "documentation": {}
+    },
+    {
+        "label": "FavoriteBookUser",
+        "importPath": "backend.models",
+        "description": "backend.models",
+        "isExtraImport": true,
+        "detail": "backend.models",
+        "documentation": {}
+    },
+    {
+        "label": "Comment",
         "importPath": "backend.models",
         "description": "backend.models",
         "isExtraImport": true,
@@ -299,7 +229,7 @@
         "documentation": {}
     },
     {
-        "label": "Borrow",
+        "label": "CustomUser",
         "importPath": "backend.models",
         "description": "backend.models",
         "isExtraImport": true,
@@ -315,51 +245,19 @@
         "documentation": {}
     },
     {
-        "label": "User",
-        "importPath": "django.contrib.auth.models",
-        "description": "django.contrib.auth.models",
+        "label": "AUTH_USER_MODEL",
+        "importPath": "loanBook.settings",
+        "description": "loanBook.settings",
         "isExtraImport": true,
-        "detail": "django.contrib.auth.models",
+        "detail": "loanBook.settings",
         "documentation": {}
     },
     {
-        "label": "Group",
-        "importPath": "django.contrib.auth.models",
-        "description": "django.contrib.auth.models",
+        "label": "slugify",
+        "importPath": "django.utils.text",
+        "description": "django.utils.text",
         "isExtraImport": true,
-        "detail": "django.contrib.auth.models",
-        "documentation": {}
-    },
-    {
-        "label": "User",
-        "importPath": "django.contrib.auth.models",
-        "description": "django.contrib.auth.models",
-        "isExtraImport": true,
-        "detail": "django.contrib.auth.models",
-        "documentation": {}
-    },
-    {
-        "label": "User",
-        "importPath": "django.contrib.auth.models",
-        "description": "django.contrib.auth.models",
-        "isExtraImport": true,
-        "detail": "django.contrib.auth.models",
-        "documentation": {}
-    },
-    {
-        "label": "timezone",
-        "importPath": "django.utils",
-        "description": "django.utils",
-        "isExtraImport": true,
-        "detail": "django.utils",
-        "documentation": {}
-    },
-    {
-        "label": "PageNumberPagination",
-        "importPath": "rest_framework.pagination",
-        "description": "rest_framework.pagination",
-        "isExtraImport": true,
-        "detail": "rest_framework.pagination",
+        "detail": "django.utils.text",
         "documentation": {}
     },
     {
@@ -372,14 +270,6 @@
     },
     {
         "label": "serializers",
-        "importPath": "rest_framework",
-        "description": "rest_framework",
-        "isExtraImport": true,
-        "detail": "rest_framework",
-        "documentation": {}
-    },
-    {
-        "label": "status",
         "importPath": "rest_framework",
         "description": "rest_framework",
         "isExtraImport": true,
@@ -403,6 +293,14 @@
         "documentation": {}
     },
     {
+        "label": "status",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
+        "isExtraImport": true,
+        "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
         "label": "routers",
         "importPath": "rest_framework",
         "description": "rest_framework",
@@ -411,11 +309,43 @@
         "documentation": {}
     },
     {
-        "label": "UniqueValidator",
-        "importPath": "rest_framework.validators",
-        "description": "rest_framework.validators",
+        "label": "ValidationError",
+        "importPath": "django.forms",
+        "description": "django.forms",
         "isExtraImport": true,
-        "detail": "rest_framework.validators",
+        "detail": "django.forms",
+        "documentation": {}
+    },
+    {
+        "label": "get_user_model",
+        "importPath": "django.contrib.auth",
+        "description": "django.contrib.auth",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth",
+        "documentation": {}
+    },
+    {
+        "label": "authenticate",
+        "importPath": "django.contrib.auth",
+        "description": "django.contrib.auth",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth",
+        "documentation": {}
+    },
+    {
+        "label": "logout",
+        "importPath": "django.contrib.auth",
+        "description": "django.contrib.auth",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth",
+        "documentation": {}
+    },
+    {
+        "label": "get_user_model",
+        "importPath": "django.contrib.auth",
+        "description": "django.contrib.auth",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth",
         "documentation": {}
     },
     {
@@ -427,11 +357,52 @@
         "documentation": {}
     },
     {
+        "label": "ContentFile",
+        "importPath": "django.core.files.base",
+        "description": "django.core.files.base",
+        "isExtraImport": true,
+        "detail": "django.core.files.base",
+        "documentation": {}
+    },
+    {
+        "label": "ValidationError",
+        "importPath": "django.core.exceptions",
+        "description": "django.core.exceptions",
+        "isExtraImport": true,
+        "detail": "django.core.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "ValidationError",
+        "importPath": "django.core.exceptions",
+        "description": "django.core.exceptions",
+        "isExtraImport": true,
+        "detail": "django.core.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
         "label": "TestCase",
         "importPath": "django.test",
         "description": "django.test",
         "isExtraImport": true,
         "detail": "django.test",
+        "documentation": {}
+    },
+    {
+        "label": "gettext",
+        "importPath": "django.utils.translation",
+        "description": "django.utils.translation",
+        "isExtraImport": true,
+        "detail": "django.utils.translation",
         "documentation": {}
     },
     {
@@ -444,6 +415,22 @@
     },
     {
         "label": "HttpResponse",
+        "importPath": "django.http",
+        "description": "django.http",
+        "isExtraImport": true,
+        "detail": "django.http",
+        "documentation": {}
+    },
+    {
+        "label": "Http404",
+        "importPath": "django.http",
+        "description": "django.http",
+        "isExtraImport": true,
+        "detail": "django.http",
+        "documentation": {}
+    },
+    {
+        "label": "FileResponse",
         "importPath": "django.http",
         "description": "django.http",
         "isExtraImport": true,
@@ -491,6 +478,14 @@
         "documentation": {}
     },
     {
+        "label": "Response",
+        "importPath": "rest_framework.response",
+        "description": "rest_framework.response",
+        "isExtraImport": true,
+        "detail": "rest_framework.response",
+        "documentation": {}
+    },
+    {
         "label": "Token",
         "importPath": "rest_framework.authtoken.models",
         "description": "rest_framework.authtoken.models",
@@ -507,28 +502,11 @@
         "documentation": {}
     },
     {
-        "label": "authenticate",
-        "importPath": "django.contrib.auth",
-        "description": "django.contrib.auth",
+        "label": "action",
+        "importPath": "rest_framework.decorators",
+        "description": "rest_framework.decorators",
         "isExtraImport": true,
-        "detail": "django.contrib.auth",
-        "documentation": {}
-    },
-    {
-        "label": "logout",
-        "importPath": "django.contrib.auth",
-        "description": "django.contrib.auth",
-        "isExtraImport": true,
-        "detail": "django.contrib.auth",
-        "documentation": {}
-    },
-    {
-        "label": "os",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "os",
-        "description": "os",
-        "detail": "os",
+        "detail": "rest_framework.decorators",
         "documentation": {}
     },
     {
@@ -540,7 +518,7 @@
         "documentation": {}
     },
     {
-        "label": "UserSerializer",
+        "label": "ImageUserUpdateSerializer",
         "importPath": "backend.serializer",
         "description": "backend.serializer",
         "isExtraImport": true,
@@ -548,7 +526,15 @@
         "documentation": {}
     },
     {
-        "label": "EmpruntSerializer",
+        "label": "CustomUserSerializer",
+        "importPath": "backend.serializer",
+        "description": "backend.serializer",
+        "isExtraImport": true,
+        "detail": "backend.serializer",
+        "documentation": {}
+    },
+    {
+        "label": "PasswordSerializer",
         "importPath": "backend.serializer",
         "description": "backend.serializer",
         "isExtraImport": true,
@@ -565,6 +551,14 @@
     },
     {
         "label": "IsAdminOrReadOnly",
+        "importPath": "backend.permission",
+        "description": "backend.permission",
+        "isExtraImport": true,
+        "detail": "backend.permission",
+        "documentation": {}
+    },
+    {
+        "label": "IsSuperUser",
         "importPath": "backend.permission",
         "description": "backend.permission",
         "isExtraImport": true,
@@ -637,7 +631,7 @@
         "documentation": {}
     },
     {
-        "label": "UserViewSet",
+        "label": "CustomUserViewSet",
         "importPath": "backend.views",
         "description": "backend.views",
         "isExtraImport": true,
@@ -645,7 +639,7 @@
         "documentation": {}
     },
     {
-        "label": "EmpruntViewSet",
+        "label": "DownloadBook",
         "importPath": "backend.views",
         "description": "backend.views",
         "isExtraImport": true,
@@ -690,116 +684,44 @@
         "kind": 6,
         "importPath": "loanBook.backend.migrations.0001_initial",
         "description": "loanBook.backend.migrations.0001_initial",
-        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='Book',\n            fields=[\n                ('id', models.UUIDField(default=uuid.uuid4, editable=False, primary_key=True, serialize=False)),\n                ('author', models.CharField(max_length=255)),",
+        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n        ('auth', '0012_alter_user_first_name_max_length'),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='CustomUser',\n            fields=[\n                ('password', models.CharField(max_length=128, verbose_name='password')),",
         "detail": "loanBook.backend.migrations.0001_initial",
         "documentation": {}
     },
     {
         "label": "Migration",
         "kind": 6,
-        "importPath": "loanBook.backend.migrations.0002_rename_date_mise_en_ligne_book_date_online_and_more",
-        "description": "loanBook.backend.migrations.0002_rename_date_mise_en_ligne_book_date_online_and_more",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('backend', '0001_initial'),\n        migrations.swappable_dependency(settings.AUTH_USER_MODEL),\n    ]\n    operations = [\n        migrations.RenameField(\n            model_name='book',\n            old_name='date_mise_en_ligne',\n            new_name='date_online',",
-        "detail": "loanBook.backend.migrations.0002_rename_date_mise_en_ligne_book_date_online_and_more",
+        "importPath": "loanBook.backend.migrations.0002_alter_book_category",
+        "description": "loanBook.backend.migrations.0002_alter_book_category",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('backend', '0001_initial'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='book',\n            name='category',\n            field=models.CharField(choices=[('Romance', 'Romance'), ('Biography', 'Biography'), ('Autobiography', 'Autobiography'), ('Business', 'Business'), ('Finance', 'Finance'), ('Personal Development', 'Personal Development'), ('Science', 'Science'), ('Guide', 'Guide'), ('Cooking', 'Cooking'), ('Technology', 'Technology'), ('Philosophy', 'Philosophy'), ('Religion', 'Religion'), ('Spirituality', 'Spirituality'), ('Economics', 'Economics'), ('Entrepreneurship', 'Entrepreneurship'), ('Politics', 'Politics'), ('Environment', 'Environment')], max_length=200),\n        ),",
+        "detail": "loanBook.backend.migrations.0002_alter_book_category",
         "documentation": {}
     },
     {
         "label": "Migration",
         "kind": 6,
-        "importPath": "loanBook.backend.migrations.0003_book_descritption_alter_book_pdf_file_and_more",
-        "description": "loanBook.backend.migrations.0003_book_descritption_alter_book_pdf_file_and_more",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('backend', '0002_rename_date_mise_en_ligne_book_date_online_and_more'),\n    ]\n    operations = [\n        migrations.AddField(\n            model_name='book',\n            name='descritption',\n            field=models.TextField(blank=True, null=True),\n        ),",
-        "detail": "loanBook.backend.migrations.0003_book_descritption_alter_book_pdf_file_and_more",
+        "importPath": "loanBook.backend.migrations.0003_rename_id_customuser_uid",
+        "description": "loanBook.backend.migrations.0003_rename_id_customuser_uid",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('backend', '0002_alter_book_category'),\n    ]\n    operations = [\n        migrations.RenameField(\n            model_name='customuser',\n            old_name='id',\n            new_name='uid',\n        ),",
+        "detail": "loanBook.backend.migrations.0003_rename_id_customuser_uid",
         "documentation": {}
     },
     {
         "label": "Migration",
         "kind": 6,
-        "importPath": "loanBook.backend.migrations.0004_rename_descritption_book_description",
-        "description": "loanBook.backend.migrations.0004_rename_descritption_book_description",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('backend', '0003_book_descritption_alter_book_pdf_file_and_more'),\n    ]\n    operations = [\n        migrations.RenameField(\n            model_name='book',\n            old_name='descritption',\n            new_name='description',\n        ),",
-        "detail": "loanBook.backend.migrations.0004_rename_descritption_book_description",
+        "importPath": "loanBook.backend.migrations.0004_rename_uid_customuser_uuid",
+        "description": "loanBook.backend.migrations.0004_rename_uid_customuser_uuid",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('backend', '0003_rename_id_customuser_uid'),\n    ]\n    operations = [\n        migrations.RenameField(\n            model_name='customuser',\n            old_name='uid',\n            new_name='uuid',\n        ),",
+        "detail": "loanBook.backend.migrations.0004_rename_uid_customuser_uuid",
         "documentation": {}
     },
     {
         "label": "Migration",
         "kind": 6,
-        "importPath": "loanBook.backend.migrations.0005_remove_book_quantity",
-        "description": "loanBook.backend.migrations.0005_remove_book_quantity",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('backend', '0004_rename_descritption_book_description'),\n    ]\n    operations = [\n        migrations.RemoveField(\n            model_name='book',\n            name='quantity',\n        ),\n    ]",
-        "detail": "loanBook.backend.migrations.0005_remove_book_quantity",
-        "documentation": {}
-    },
-    {
-        "label": "Migration",
-        "kind": 6,
-        "importPath": "loanBook.backend.migrations.0006_emprunt_borrow_date_emprunt_return_date",
-        "description": "loanBook.backend.migrations.0006_emprunt_borrow_date_emprunt_return_date",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('backend', '0005_remove_book_quantity'),\n    ]\n    operations = [\n        migrations.AddField(\n            model_name='emprunt',\n            name='borrow_date',\n            field=models.DateField(default=django.utils.timezone.now),\n        ),",
-        "detail": "loanBook.backend.migrations.0006_emprunt_borrow_date_emprunt_return_date",
-        "documentation": {}
-    },
-    {
-        "label": "Migration",
-        "kind": 6,
-        "importPath": "loanBook.backend.migrations.0007_borrow_delete_emprunt",
-        "description": "loanBook.backend.migrations.0007_borrow_delete_emprunt",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('backend', '0006_emprunt_borrow_date_emprunt_return_date'),\n        migrations.swappable_dependency(settings.AUTH_USER_MODEL),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='Borrow',\n            fields=[\n                ('id', models.UUIDField(default=uuid.uuid4, editable=False, primary_key=True, serialize=False)),",
-        "detail": "loanBook.backend.migrations.0007_borrow_delete_emprunt",
-        "documentation": {}
-    },
-    {
-        "label": "Migration",
-        "kind": 6,
-        "importPath": "loanBook.backend.migrations.0008_alter_book_picture_books",
-        "description": "loanBook.backend.migrations.0008_alter_book_picture_books",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('backend', '0007_borrow_delete_emprunt'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='book',\n            name='picture_books',\n            field=models.FileField(blank=True, default='default_image.jpg', null=True, upload_to='images/picture_books/'),\n        ),",
-        "detail": "loanBook.backend.migrations.0008_alter_book_picture_books",
-        "documentation": {}
-    },
-    {
-        "label": "Migration",
-        "kind": 6,
-        "importPath": "loanBook.backend.migrations.0009_alter_book_pdf_file",
-        "description": "loanBook.backend.migrations.0009_alter_book_pdf_file",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('backend', '0008_alter_book_picture_books'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='book',\n            name='pdf_file',\n            field=models.FileField(blank=True, default='default_pdf.pdf', null=True, upload_to='images/pdf_books/'),\n        ),",
-        "detail": "loanBook.backend.migrations.0009_alter_book_pdf_file",
-        "documentation": {}
-    },
-    {
-        "label": "Migration",
-        "kind": 6,
-        "importPath": "loanBook.backend.migrations.0010_alter_book_year_publication",
-        "description": "loanBook.backend.migrations.0010_alter_book_year_publication",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('backend', '0009_alter_book_pdf_file'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='book',\n            name='year_publication',\n            field=models.DateField(),\n        ),",
-        "detail": "loanBook.backend.migrations.0010_alter_book_year_publication",
-        "documentation": {}
-    },
-    {
-        "label": "Migration",
-        "kind": 6,
-        "importPath": "loanBook.backend.migrations.0011_alter_book_pdf_file_alter_book_picture_books",
-        "description": "loanBook.backend.migrations.0011_alter_book_pdf_file_alter_book_picture_books",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('backend', '0010_alter_book_year_publication'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='book',\n            name='pdf_file',\n            field=models.FileField(blank=True, null=True, upload_to='images/pdf_books/'),\n        ),",
-        "detail": "loanBook.backend.migrations.0011_alter_book_pdf_file_alter_book_picture_books",
-        "documentation": {}
-    },
-    {
-        "label": "Migration",
-        "kind": 6,
-        "importPath": "loanBook.backend.migrations.0012_alter_book_picture_books",
-        "description": "loanBook.backend.migrations.0012_alter_book_picture_books",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('backend', '0011_alter_book_pdf_file_alter_book_picture_books'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='book',\n            name='picture_books',\n            field=models.FileField(upload_to='images/picture_books/'),\n        ),",
-        "detail": "loanBook.backend.migrations.0012_alter_book_picture_books",
-        "documentation": {}
-    },
-    {
-        "label": "Migration",
-        "kind": 6,
-        "importPath": "loanBook.backend.migrations.0013_alter_book_pdf_file_alter_book_picture_books",
-        "description": "loanBook.backend.migrations.0013_alter_book_pdf_file_alter_book_picture_books",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('backend', '0012_alter_book_picture_books'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='book',\n            name='pdf_file',\n            field=models.FileField(blank=True, null=True, upload_to='pdf_books/'),\n        ),",
-        "detail": "loanBook.backend.migrations.0013_alter_book_pdf_file_alter_book_picture_books",
+        "importPath": "loanBook.backend.migrations.0005_rename_uuid_customuser_id",
+        "description": "loanBook.backend.migrations.0005_rename_uuid_customuser_id",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('backend', '0004_rename_uid_customuser_uuid'),\n    ]\n    operations = [\n        migrations.RenameField(\n            model_name='customuser',\n            old_name='uuid',\n            new_name='id',\n        ),",
+        "detail": "loanBook.backend.migrations.0005_rename_uuid_customuser_id",
         "documentation": {}
     },
     {
@@ -812,39 +734,57 @@
         "documentation": {}
     },
     {
+        "label": "CustomUser",
+        "kind": 6,
+        "importPath": "loanBook.backend.models",
+        "description": "loanBook.backend.models",
+        "peekOfCode": "class CustomUser(AbstractUser):\n    USER_TYPE_CHOICES = (\n        (1, 'Editeur'),\n        (2, 'Lecteur'),\n    )\n    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)\n    user_type = models.PositiveSmallIntegerField(choices=USER_TYPE_CHOICES, default=2)\n    biography = models.TextField(null=True, blank=True)\n    phone_number = models.CharField(max_length=15, blank=True, null=True)\n    country = models.CharField(max_length=100,null=True, blank=True)",
+        "detail": "loanBook.backend.models",
+        "documentation": {}
+    },
+    {
         "label": "Book",
         "kind": 6,
         "importPath": "loanBook.backend.models",
         "description": "loanBook.backend.models",
-        "peekOfCode": "class Book(models.Model):\n    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)\n    author = models.CharField(max_length=255)\n    description = models.TextField(null=True, blank=True)\n    title = models.CharField(max_length=255, null=True, blank=True, unique=True)\n    year_publication = models.DateField(null=False, blank=False)\n    date_online = models.DateField(auto_now_add=True)\n    number_dowload = models.IntegerField(default=0)\n    user = models.ForeignKey(User, on_delete=models.CASCADE)\n    gender = models.CharField(max_length=200)",
+        "peekOfCode": "class Book(models.Model):\n    CATEGORY_BOOK = (\n        ('Romance', 'Romance'),\n        ('Biography', 'Biography'),\n        ('Autobiography', 'Autobiography'),\n        ('Business', 'Business'),\n        ('Finance', 'Finance'),\n        ('Personal Development', 'Personal Development'),\n        ('Science', 'Science'),\n        ('Guide', 'Guide'),",
         "detail": "loanBook.backend.models",
         "documentation": {}
     },
     {
-        "label": "Borrow",
+        "label": "Rating",
         "kind": 6,
         "importPath": "loanBook.backend.models",
         "description": "loanBook.backend.models",
-        "peekOfCode": "class Borrow(models.Model):\n    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)\n    books = models.ForeignKey(Book, on_delete=models.CASCADE, default=\"9dfdd4c2-0247-48b0-8450-fb6d726ed545\")\n    user = models.ForeignKey(User, on_delete=models.CASCADE)\n    borrow_date = models.DateField(default=timezone.now)\n    return_date = models.DateField(default=timezone.now)",
+        "peekOfCode": "class Rating(models.Model):\n    book = models.ForeignKey(Book, related_name='ratings', on_delete=models.CASCADE)\n    user = models.ForeignKey(User_model, on_delete=models.CASCADE)\n    score = models.PositiveSmallIntegerField()  # Vous pouvez limiter cela à un score maximal, par exemple 1-5\n    class Meta:\n        unique_together = (('user', 'book'),)  # S'assurer qu'un utilisateur ne peut noter qu'une seule fois un livre\n    def save(self, *args, **kwargs):\n        super().save(*args, **kwargs)\n        if self.pk:  # Vérifie que c'est une création de note et non une mise à jour\n            book = self.book",
         "detail": "loanBook.backend.models",
         "documentation": {}
     },
     {
-        "label": "LargeResultsSetPagination",
+        "label": "FavoriteBookUser",
         "kind": 6,
-        "importPath": "loanBook.backend.pagination",
-        "description": "loanBook.backend.pagination",
-        "peekOfCode": "class LargeResultsSetPagination(PageNumberPagination):\n    page_size = 1000\n    page_size_query_param = 'page_size'\n    max_page_size = 10000\nclass StandardResultsSetPagination(PageNumberPagination):\n    page_size = 100\n    page_size_query_param = 'page_size'\n    max_page_size = 1000",
-        "detail": "loanBook.backend.pagination",
+        "importPath": "loanBook.backend.models",
+        "description": "loanBook.backend.models",
+        "peekOfCode": "class FavoriteBookUser(models.Model):\n    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)\n    user = models.ForeignKey(User_model, on_delete=models.CASCADE)\n    book = models.ForeignKey(Book,on_delete=models.CASCADE)\n    created_at = models.DateTimeField(auto_now_add=True)\n    def __str__(self):\n        return f\"{self.book.title} put favorite by {self.user.username}\"\nclass Comment(models.Model):\n    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)\n    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)",
+        "detail": "loanBook.backend.models",
         "documentation": {}
     },
     {
-        "label": "StandardResultsSetPagination",
+        "label": "Comment",
         "kind": 6,
-        "importPath": "loanBook.backend.pagination",
-        "description": "loanBook.backend.pagination",
-        "peekOfCode": "class StandardResultsSetPagination(PageNumberPagination):\n    page_size = 100\n    page_size_query_param = 'page_size'\n    max_page_size = 1000",
-        "detail": "loanBook.backend.pagination",
+        "importPath": "loanBook.backend.models",
+        "description": "loanBook.backend.models",
+        "peekOfCode": "class Comment(models.Model):\n    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)\n    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)\n    book = models.ForeignKey(Book, related_name='comments', on_delete=models.CASCADE)\n    parent = models.ForeignKey('self', on_delete=models.CASCADE, related_name='replies', null=True, blank=True)\n    content = models.TextField()\n    publish_date = models.DateTimeField(auto_now_add=True)\n    def __str__(self):\n        return f'Comment by {self.user.username} on {self.book.title}'\nclass BookVersion(models.Model):",
+        "detail": "loanBook.backend.models",
+        "documentation": {}
+    },
+    {
+        "label": "BookVersion",
+        "kind": 6,
+        "importPath": "loanBook.backend.models",
+        "description": "loanBook.backend.models",
+        "peekOfCode": "class BookVersion(models.Model):\n    BOOK_TYPES = (\n        ('pdf', 'PDF'),\n        ('audio', 'Audio'),\n        ('ebook', 'E-book'),\n    )\n    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)\n    book = models.ForeignKey(Book, related_name='versions', on_delete=models.CASCADE)\n    book_type = models.CharField(max_length=10, choices=BOOK_TYPES)\n    language = models.CharField(max_length=30)",
+        "detail": "loanBook.backend.models",
         "documentation": {}
     },
     {
@@ -852,8 +792,26 @@
         "kind": 6,
         "importPath": "loanBook.backend.permission",
         "description": "loanBook.backend.permission",
-        "peekOfCode": "class IsAdminOrReadOnly(permissions.BasePermission):\n    def has_permission(self, request, view):\n        # Allow read permissions to anyone\n        if request.method in permissions.SAFE_METHODS:\n            return True\n        # Restrict write permissions to authenticated users\n        return request.user and request.user.is_authenticated and request.user.is_staff",
+        "peekOfCode": "class IsAdminOrReadOnly(permissions.BasePermission):\n    def has_permission(self, request, view):\n        if request.method in permissions.SAFE_METHODS:\n            return request.user\n        return request.user and request.user.is_authenticated and (request.user.is_staff or request.user.is_superuser)\nclass IsSuperUser(permissions.BasePermission):\n    def has_permission(self, request, view):\n        return request.user and request.user.is_superuser and request.user.is_authenticated",
         "detail": "loanBook.backend.permission",
+        "documentation": {}
+    },
+    {
+        "label": "IsSuperUser",
+        "kind": 6,
+        "importPath": "loanBook.backend.permission",
+        "description": "loanBook.backend.permission",
+        "peekOfCode": "class IsSuperUser(permissions.BasePermission):\n    def has_permission(self, request, view):\n        return request.user and request.user.is_superuser and request.user.is_authenticated",
+        "detail": "loanBook.backend.permission",
+        "documentation": {}
+    },
+    {
+        "label": "BookVersionSerializer",
+        "kind": 6,
+        "importPath": "loanBook.backend.serializer",
+        "description": "loanBook.backend.serializer",
+        "peekOfCode": "class BookVersionSerializer(serializers.HyperlinkedModelSerializer):\n    class Meta:\n        models=BookVersion\n        fields = '__all__'\n        exclude = ['created_at']\n    def Validate_data(self, data):\n        if not data.get(\"book\"):\n            raise serializers.ValidateError(\"Book:Book is required\")\n        if not data.get(\"book_type\"):\n            raise serializers.ValidationError(\"Book Type: Book type is required\")",
+        "detail": "loanBook.backend.serializer",
         "documentation": {}
     },
     {
@@ -861,25 +819,34 @@
         "kind": 6,
         "importPath": "loanBook.backend.serializer",
         "description": "loanBook.backend.serializer",
-        "peekOfCode": "class BookSerializer(serializers.HyperlinkedModelSerializer):\n    class Meta:\n        model = Book\n        fields = ['url', 'author', 'description','title', 'year_publication','type_book','number_dowload','gender','user','status_book','pdf_file','picture_books']\nclass EmpruntSerializer(serializers.HyperlinkedModelSerializer):\n    class Meta:\n        model = Borrow\n        fields = ['id', 'user', 'books']\nclass UserSerializer(serializers.ModelSerializer):\n    url = serializers.HyperlinkedIdentityField(view_name='user-detail')",
+        "peekOfCode": "class BookSerializer(serializers.HyperlinkedModelSerializer):\n    user = serializers.HyperlinkedRelatedField(\n        view_name='user-detail',\n        read_only=True,\n        lookup_field='id' \n    )\n    class Meta:\n        model = Book\n        fields = ['url', 'author', 'summary','title', 'year_publication','download_count','category','user','slug','rating_sum','rating_count','id']\n        read_only_fields = [\"id\",\"slug\",\"rating_sum\",\"download_count\"]",
         "detail": "loanBook.backend.serializer",
         "documentation": {}
     },
     {
-        "label": "EmpruntSerializer",
+        "label": "CustomUserSerializer",
         "kind": 6,
         "importPath": "loanBook.backend.serializer",
         "description": "loanBook.backend.serializer",
-        "peekOfCode": "class EmpruntSerializer(serializers.HyperlinkedModelSerializer):\n    class Meta:\n        model = Borrow\n        fields = ['id', 'user', 'books']\nclass UserSerializer(serializers.ModelSerializer):\n    url = serializers.HyperlinkedIdentityField(view_name='user-detail')\n    class Meta:\n        model = User\n        fields = ('url','username', 'password', 'email', 'first_name', 'last_name','is_staff')\nclass LoginSerializer(serializers.Serializer):",
+        "peekOfCode": "class CustomUserSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = CustomUser\n        fields = ['url', 'username', 'first_name','last_name', 'email', 'user_type', 'biography', 'phone_number', 'country', 'total_book_download', 'image', 'created_at','password']\n        read_only_fields = ['total_book_download', 'created_at']\n        extra_kwargs = {\n            'password': {'write_only': True},\n            'url': {'view_name': 'user-detail', 'lookup_field': 'pk'}\n        }\n    # Je crée une fois le user de base avec un role de niveau 2 par defaut.",
         "detail": "loanBook.backend.serializer",
         "documentation": {}
     },
     {
-        "label": "UserSerializer",
+        "label": "PasswordSerializer",
         "kind": 6,
         "importPath": "loanBook.backend.serializer",
         "description": "loanBook.backend.serializer",
-        "peekOfCode": "class UserSerializer(serializers.ModelSerializer):\n    url = serializers.HyperlinkedIdentityField(view_name='user-detail')\n    class Meta:\n        model = User\n        fields = ('url','username', 'password', 'email', 'first_name', 'last_name','is_staff')\nclass LoginSerializer(serializers.Serializer):\n    username = serializers.CharField(max_length=150)\n    password = serializers.CharField(max_length=128)",
+        "peekOfCode": "class PasswordSerializer(serializers.Serializer):\n    old_password = serializers.CharField(required=True)\n    new_password = serializers.CharField(required=True)\n    confirm_password = serializers.CharField(required=True)\n    def validate(self, data):\n        old_password = data.get('old_password')  # Utiliser get pour éviter KeyError\n        new_password = data.get('new_password')  # Utiliser get pour éviter KeyError\n        confirm_password = data.get('confirm_password')  # Utiliser get pour éviter KeyError\n        try:\n            validate_password(new_password)",
+        "detail": "loanBook.backend.serializer",
+        "documentation": {}
+    },
+    {
+        "label": "ImageUserUpdateSerializer",
+        "kind": 6,
+        "importPath": "loanBook.backend.serializer",
+        "description": "loanBook.backend.serializer",
+        "peekOfCode": "class ImageUserUpdateSerializer(serializers.Serializer):\n    image = serializers.ImageField(required=True)\n    def validate_image(self, value):\n        MAX_SIZE = 12000000  # 12 MB\n        # `value` est l'objet fichier ici, pas un dictionnaire\n        if value.size > MAX_SIZE:\n            raise ValidationError(\"Image volumineuse, taille maximale autorisée est de 12 MB.\")\n        # Vérification du format de l'image\n        valid_extensions = ['jpg', 'jpeg', 'png', 'svg']\n        extension = os.path.splitext(value.name)[1][1:].lower()",
         "detail": "loanBook.backend.serializer",
         "documentation": {}
     },
@@ -888,16 +855,43 @@
         "kind": 6,
         "importPath": "loanBook.backend.serializer",
         "description": "loanBook.backend.serializer",
-        "peekOfCode": "class LoginSerializer(serializers.Serializer):\n    username = serializers.CharField(max_length=150)\n    password = serializers.CharField(max_length=128)",
+        "peekOfCode": "class LoginSerializer(serializers.Serializer):\n    username = serializers.CharField(required=True)\n    password = serializers.CharField(required=True)",
         "detail": "loanBook.backend.serializer",
         "documentation": {}
     },
     {
-        "label": "UserViewSet",
+        "label": "User",
+        "kind": 5,
+        "importPath": "loanBook.backend.serializer",
+        "description": "loanBook.backend.serializer",
+        "peekOfCode": "User = get_user_model()\nclass BookVersionSerializer(serializers.HyperlinkedModelSerializer):\n    class Meta:\n        models=BookVersion\n        fields = '__all__'\n        exclude = ['created_at']\n    def Validate_data(self, data):\n        if not data.get(\"book\"):\n            raise serializers.ValidateError(\"Book:Book is required\")\n        if not data.get(\"book_type\"):",
+        "detail": "loanBook.backend.serializer",
+        "documentation": {}
+    },
+    {
+        "label": "CustomPasswordValidator",
+        "kind": 6,
+        "importPath": "loanBook.backend.validators",
+        "description": "loanBook.backend.validators",
+        "peekOfCode": "class CustomPasswordValidator:\n    def validate(self, password, user=None):\n        if not any(char.isdigit() for char in password):\n            raise ValidationError(_('Le mot de passe doit contenir au moins un chiffre.'), code='password_no_number')\n        if not any(char.isalpha() for char in password):\n            raise ValidationError(_('Le mot de passe doit contenir au moins une lettre.'), code='password_no_letter')\n        if not any(char.islower() for char in password):\n            raise ValidationError(_('Le mot de passe doit contenir au moins une minuscule.'), code='password_no_lower')\n        if not any(char.isupper() for char in password):\n            raise ValidationError(_('Le mot de passe doit contenir au moins une majuscule.'), code='password_no_upper')",
+        "detail": "loanBook.backend.validators",
+        "documentation": {}
+    },
+    {
+        "label": "BookViewSet",
         "kind": 6,
         "importPath": "loanBook.backend.views",
         "description": "loanBook.backend.views",
-        "peekOfCode": "class UserViewSet(viewsets.ModelViewSet):\n    queryset = User.objects.all()\n    serializer_class = UserSerializer\n    authentication_classes = [TokenAuthentication]\n    permission_classes =  [IsAdminOrReadOnly]\nclass LoginViewSet(APIView):\n    permission_classes =  [permissions.AllowAny]\n    def post(self, request):\n        serializer = LoginSerializer(data=request.data)\n        if serializer.is_valid():",
+        "peekOfCode": "class BookViewSet(viewsets.ModelViewSet):\n    queryset = Book.objects.all()\n    serializer_class = BookSerializer\n    def get_permissions(self):\n        if self.action in ['create','update','partial_update']:\n            return [IsAdminOrReadOnly(),IsSuperUser(), permissions.IsAuthenticated()]\n        elif self.action in [\"retrieve\",\"list\"]:\n            return [permissions.AllowAny()]\n        else:\n            return [permissions.IsAuthenticated()]",
+        "detail": "loanBook.backend.views",
+        "documentation": {}
+    },
+    {
+        "label": "CustomUserViewSet",
+        "kind": 6,
+        "importPath": "loanBook.backend.views",
+        "description": "loanBook.backend.views",
+        "peekOfCode": "class CustomUserViewSet(viewsets.ModelViewSet):\n    queryset = CustomUser.objects.all()\n    serializer_class = CustomUserSerializer\n    lookup_field = 'id'\n    def get_permissions(self):\n        \"\"\"\n        Instantier et retourner la liste des permissions que cette vue requiert.\n        \"\"\"\n        if self.action in ['create']:\n            return [permissions.AllowAny()]",
         "detail": "loanBook.backend.views",
         "documentation": {}
     },
@@ -906,7 +900,7 @@
         "kind": 6,
         "importPath": "loanBook.backend.views",
         "description": "loanBook.backend.views",
-        "peekOfCode": "class LoginViewSet(APIView):\n    permission_classes =  [permissions.AllowAny]\n    def post(self, request):\n        serializer = LoginSerializer(data=request.data)\n        if serializer.is_valid():\n            username = serializer.validated_data['username']\n            password = serializer.validated_data['password']\n        # Authentification de l'utilisateur\n        user = authenticate(username=username, password=password)\n        user_url = reverse('user-detail', kwargs={'pk': user.pk})",
+        "peekOfCode": "class LoginViewSet(APIView):\n    permission_classes = [permissions.AllowAny]\n    def post(self, request):\n        serializer = LoginSerializer(data=request.data)\n        if not serializer.is_valid():\n            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)\n        username = serializer.validated_data['username']\n        password = serializer.validated_data['password']\n        user = authenticate(username=username, password=password)\n        if not user:",
         "detail": "loanBook.backend.views",
         "documentation": {}
     },
@@ -915,25 +909,7 @@
         "kind": 6,
         "importPath": "loanBook.backend.views",
         "description": "loanBook.backend.views",
-        "peekOfCode": "class LogoutViewSet(APIView):\n    def post(self, request, format=None):\n        logout(request)\n        return Response({\"success\": \"Successfully logged out\"}, status=status.HTTP_200_OK)\nclass BookViewSet(viewsets.ModelViewSet):\n    queryset = Book.objects.all()\n    serializer_class = BookSerializer\n    authentication_classes = [TokenAuthentication]\n    permission_classes = [IsAdminOrReadOnly]\n    # pagination_class = LargeResultsSetPagination",
-        "detail": "loanBook.backend.views",
-        "documentation": {}
-    },
-    {
-        "label": "BookViewSet",
-        "kind": 6,
-        "importPath": "loanBook.backend.views",
-        "description": "loanBook.backend.views",
-        "peekOfCode": "class BookViewSet(viewsets.ModelViewSet):\n    queryset = Book.objects.all()\n    serializer_class = BookSerializer\n    authentication_classes = [TokenAuthentication]\n    permission_classes = [IsAdminOrReadOnly]\n    # pagination_class = LargeResultsSetPagination\nclass EmpruntViewSet(viewsets.ModelViewSet):\n    queryset = Borrow.objects.all()\n    serializer_class = EmpruntSerializer\n    authentication_classes = [TokenAuthentication]",
-        "detail": "loanBook.backend.views",
-        "documentation": {}
-    },
-    {
-        "label": "EmpruntViewSet",
-        "kind": 6,
-        "importPath": "loanBook.backend.views",
-        "description": "loanBook.backend.views",
-        "peekOfCode": "class EmpruntViewSet(viewsets.ModelViewSet):\n    queryset = Borrow.objects.all()\n    serializer_class = EmpruntSerializer\n    authentication_classes = [TokenAuthentication]\n    permission_classes = []\nclass DownloadBook(APIView):\n    def get_book(request, pk):\n        book = get_object_or_404(Book, pk=pk)\n        file_path = os.path.join(settings.MEDIA_ROOT, book.pdf_file.name)\n        with open(file_path, 'rb') as file:",
+        "peekOfCode": "class LogoutViewSet(APIView):\n    def post(self, request, format=None):\n        logout(request)\n        return Response({\"success\": \"Successfully logged out\"}, status=status.HTTP_200_OK)\n# class BorrowViewSet(viewsets.ModelViewSet):\n#     queryset = Borrow.objects.all()\n#     serializer_class = EmpruntSerializer\n#     authentication_classes = [TokenAuthentication]\n#     def get_queryset(self):\n#         if self.request.user.is_authenticated:",
         "detail": "loanBook.backend.views",
         "documentation": {}
     },
@@ -942,7 +918,7 @@
         "kind": 6,
         "importPath": "loanBook.backend.views",
         "description": "loanBook.backend.views",
-        "peekOfCode": "class DownloadBook(APIView):\n    def get_book(request, pk):\n        book = get_object_or_404(Book, pk=pk)\n        file_path = os.path.join(settings.MEDIA_ROOT, book.pdf_file.name)\n        with open(file_path, 'rb') as file:\n            response = HttpResponse(file.read(), content_type='application/pdf')\n            response['Content-Disposition'] = f'inline; filename={book.pdf_file.name}'\n        book.number_dowload += 1\n        book.save()\n        return response",
+        "peekOfCode": "class DownloadBook(APIView):\n    authentication_classes = [TokenAuthentication]\n    def get(self, request, pk):\n        # Récupérer le livre par son ID\n        book = get_object_or_404(Book, pk=pk)\n        # Chemin du fichier PDF\n        file_path = os.path.join(settings.MEDIA_ROOT, book.pdf_file.name)\n        # Debug: Afficher le chemin du fichier\n        print(f\"Chemin du fichier: {file_path}\")\n        # Vérifier que le fichier existe",
         "detail": "loanBook.backend.views",
         "documentation": {}
     },
@@ -1176,7 +1152,7 @@
         "kind": 5,
         "importPath": "loanBook.loanBook.settings",
         "description": "loanBook.loanBook.settings",
-        "peekOfCode": "CORS_ALLOWED_ORIGINS = [\n    'http://localhost:5173',  # L'URL de votre application Vue.js\n]\nMIDDLEWARE = [\n    'django.middleware.security.SecurityMiddleware',\n    'django.contrib.sessions.middleware.SessionMiddleware',\n    'corsheaders.middleware.CorsMiddleware',\n    'django.middleware.common.CommonMiddleware',\n    'django.middleware.csrf.CsrfViewMiddleware',\n    'django.contrib.auth.middleware.AuthenticationMiddleware',",
+        "peekOfCode": "CORS_ALLOWED_ORIGINS = [\n    'http://localhost:5173',  # L'URL de votre application Vue.js\n]\nMIDDLEWARE = [\n    'django.middleware.security.SecurityMiddleware',\n    'django.contrib.sessions.middleware.SessionMiddleware',\n    'corsheaders.middleware.CorsMiddleware',\n    'django.middleware.common.CommonMiddleware',\n    # 'django.middleware.csrf.CsrfViewMiddleware',\n    'django.contrib.auth.middleware.AuthenticationMiddleware',",
         "detail": "loanBook.loanBook.settings",
         "documentation": {}
     },
@@ -1185,7 +1161,7 @@
         "kind": 5,
         "importPath": "loanBook.loanBook.settings",
         "description": "loanBook.loanBook.settings",
-        "peekOfCode": "MIDDLEWARE = [\n    'django.middleware.security.SecurityMiddleware',\n    'django.contrib.sessions.middleware.SessionMiddleware',\n    'corsheaders.middleware.CorsMiddleware',\n    'django.middleware.common.CommonMiddleware',\n    'django.middleware.csrf.CsrfViewMiddleware',\n    'django.contrib.auth.middleware.AuthenticationMiddleware',\n    'django.contrib.messages.middleware.MessageMiddleware',\n    'django.middleware.clickjacking.XFrameOptionsMiddleware',\n]",
+        "peekOfCode": "MIDDLEWARE = [\n    'django.middleware.security.SecurityMiddleware',\n    'django.contrib.sessions.middleware.SessionMiddleware',\n    'corsheaders.middleware.CorsMiddleware',\n    'django.middleware.common.CommonMiddleware',\n    # 'django.middleware.csrf.CsrfViewMiddleware',\n    'django.contrib.auth.middleware.AuthenticationMiddleware',\n    'django.contrib.messages.middleware.MessageMiddleware',\n    'django.middleware.clickjacking.XFrameOptionsMiddleware',\n]",
         "detail": "loanBook.loanBook.settings",
         "documentation": {}
     },
@@ -1194,7 +1170,7 @@
         "kind": 5,
         "importPath": "loanBook.loanBook.settings",
         "description": "loanBook.loanBook.settings",
-        "peekOfCode": "REST_FRAMEWORK = {\n    'DEFAULT_AUTHENTICATION_CLASSES': (\n        'rest_framework.authentication.TokenAuthentication',\n    ),\n    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',\n    'PAGE_SIZE': 100\n}\nROOT_URLCONF = 'loanBook.urls'\nTEMPLATES = [\n    {",
+        "peekOfCode": "REST_FRAMEWORK = {\n    'DEFAULT_AUTHENTICATION_CLASSES': (\n        'rest_framework.authentication.TokenAuthentication',\n    ),\n    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',\n    'PAGE_SIZE': 10\n}\nROOT_URLCONF = 'loanBook.urls'\nTEMPLATES = [\n    {",
         "detail": "loanBook.loanBook.settings",
         "documentation": {}
     },
@@ -1239,7 +1215,7 @@
         "kind": 5,
         "importPath": "loanBook.loanBook.settings",
         "description": "loanBook.loanBook.settings",
-        "peekOfCode": "AUTH_PASSWORD_VALIDATORS = [\n    {\n        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',\n    },\n    {\n        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',\n    },\n    {\n        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',\n    },",
+        "peekOfCode": "AUTH_PASSWORD_VALIDATORS = [\n    {\n        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',\n    },\n    {\n        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',\n        'OPTIONS': {\n            'min_length': 9,\n        },\n    },",
         "detail": "loanBook.loanBook.settings",
         "documentation": {}
     },
@@ -1311,7 +1287,7 @@
         "kind": 5,
         "importPath": "loanBook.loanBook.settings",
         "description": "loanBook.loanBook.settings",
-        "peekOfCode": "DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\n# Définir la durée de vie des tokens (par défaut : 30 jours)\nTOKEN_EXPIRATION = 30\n# Définir la durée de vie des tokens par rapport à l'heure actuelle (par défaut : timedelta(minutes=5))\nTOKEN_EXPIRATION_DELTA = timedelta(days=TOKEN_EXPIRATION)\nURL_REDIRECT_LOGIN = 'login/'\nAPPEND_SLASH=False",
+        "peekOfCode": "DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\n# Définir la durée de vie des tokens (par défaut : 30 jours)\nTOKEN_EXPIRATION = 30\n# Définir la durée de vie des tokens par rapport à l'heure actuelle (par défaut : timedelta(minutes=5))\nTOKEN_EXPIRATION_DELTA = timedelta(days=TOKEN_EXPIRATION)\nURL_REDIRECT_LOGIN = 'login/'\nAPPEND_SLASH=False\nAUTH_USER_MODEL = 'backend.CustomUser'",
         "detail": "loanBook.loanBook.settings",
         "documentation": {}
     },
@@ -1320,7 +1296,7 @@
         "kind": 5,
         "importPath": "loanBook.loanBook.settings",
         "description": "loanBook.loanBook.settings",
-        "peekOfCode": "TOKEN_EXPIRATION = 30\n# Définir la durée de vie des tokens par rapport à l'heure actuelle (par défaut : timedelta(minutes=5))\nTOKEN_EXPIRATION_DELTA = timedelta(days=TOKEN_EXPIRATION)\nURL_REDIRECT_LOGIN = 'login/'\nAPPEND_SLASH=False",
+        "peekOfCode": "TOKEN_EXPIRATION = 30\n# Définir la durée de vie des tokens par rapport à l'heure actuelle (par défaut : timedelta(minutes=5))\nTOKEN_EXPIRATION_DELTA = timedelta(days=TOKEN_EXPIRATION)\nURL_REDIRECT_LOGIN = 'login/'\nAPPEND_SLASH=False\nAUTH_USER_MODEL = 'backend.CustomUser'",
         "detail": "loanBook.loanBook.settings",
         "documentation": {}
     },
@@ -1329,7 +1305,7 @@
         "kind": 5,
         "importPath": "loanBook.loanBook.settings",
         "description": "loanBook.loanBook.settings",
-        "peekOfCode": "TOKEN_EXPIRATION_DELTA = timedelta(days=TOKEN_EXPIRATION)\nURL_REDIRECT_LOGIN = 'login/'\nAPPEND_SLASH=False",
+        "peekOfCode": "TOKEN_EXPIRATION_DELTA = timedelta(days=TOKEN_EXPIRATION)\nURL_REDIRECT_LOGIN = 'login/'\nAPPEND_SLASH=False\nAUTH_USER_MODEL = 'backend.CustomUser'",
         "detail": "loanBook.loanBook.settings",
         "documentation": {}
     },
@@ -1338,7 +1314,16 @@
         "kind": 5,
         "importPath": "loanBook.loanBook.settings",
         "description": "loanBook.loanBook.settings",
-        "peekOfCode": "URL_REDIRECT_LOGIN = 'login/'\nAPPEND_SLASH=False",
+        "peekOfCode": "URL_REDIRECT_LOGIN = 'login/'\nAPPEND_SLASH=False\nAUTH_USER_MODEL = 'backend.CustomUser'",
+        "detail": "loanBook.loanBook.settings",
+        "documentation": {}
+    },
+    {
+        "label": "AUTH_USER_MODEL",
+        "kind": 5,
+        "importPath": "loanBook.loanBook.settings",
+        "description": "loanBook.loanBook.settings",
+        "peekOfCode": "AUTH_USER_MODEL = 'backend.CustomUser'",
         "detail": "loanBook.loanBook.settings",
         "documentation": {}
     },
@@ -1347,7 +1332,7 @@
         "kind": 5,
         "importPath": "loanBook.loanBook.urls",
         "description": "loanBook.loanBook.urls",
-        "peekOfCode": "router = routers.DefaultRouter()\nrouter.register(r'books', BookViewSet)\nrouter.register(r'users', UserViewSet)\nrouter.register(r'emprunts', EmpruntViewSet)\nurlpatterns = [\n    path('',include(router.urls)),\n    path('admin/clearcache/', include('clearcache.urls')),\n    path('login/', LoginViewSet.as_view()),\n    path('logout/', LogoutViewSet.as_view()),\n    path('admin/', admin.site.urls)",
+        "peekOfCode": "router = routers.DefaultRouter()\nrouter.register(r'books', BookViewSet, basename=\"book\")\nrouter.register(r'users', CustomUserViewSet, basename='user')\nurlpatterns = [\n  path('',include(router.urls)),\n  path('admin/clearcache/', include('clearcache.urls')),\n  path('books/download/<str:pk>', DownloadBook.as_view()),\n  path('login/', LoginViewSet.as_view()),\n  path('logout/', LogoutViewSet.as_view()),\n  path('admin/', admin.site.urls)",
         "detail": "loanBook.loanBook.urls",
         "documentation": {}
     },
@@ -1356,7 +1341,7 @@
         "kind": 5,
         "importPath": "loanBook.loanBook.urls",
         "description": "loanBook.loanBook.urls",
-        "peekOfCode": "urlpatterns = [\n    path('',include(router.urls)),\n    path('admin/clearcache/', include('clearcache.urls')),\n    path('login/', LoginViewSet.as_view()),\n    path('logout/', LogoutViewSet.as_view()),\n    path('admin/', admin.site.urls)\n]\nif settings.DEBUG:\n  urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)",
+        "peekOfCode": "urlpatterns = [\n  path('',include(router.urls)),\n  path('admin/clearcache/', include('clearcache.urls')),\n  path('books/download/<str:pk>', DownloadBook.as_view()),\n  path('login/', LoginViewSet.as_view()),\n  path('logout/', LogoutViewSet.as_view()),\n  path('admin/', admin.site.urls)\n]\nif settings.DEBUG:\n  urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)",
         "detail": "loanBook.loanBook.urls",
         "documentation": {}
     },

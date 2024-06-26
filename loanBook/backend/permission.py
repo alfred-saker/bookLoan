@@ -3,9 +3,10 @@ from rest_framework import permissions
 class IsAdminOrReadOnly(permissions.BasePermission):
 
     def has_permission(self, request, view):
-        # Allow read permissions to anyone
         if request.method in permissions.SAFE_METHODS:
-            return True
+            return request.user
+        return request.user and request.user.is_authenticated and (request.user.is_staff or request.user.is_superuser)
 
-        # Restrict write permissions to authenticated users
-        return request.user and request.user.is_authenticated and request.user.is_staff
+class IsSuperUser(permissions.BasePermission):
+    def has_permission(self, request, view):
+        return request.user and request.user.is_superuser and request.user.is_authenticated

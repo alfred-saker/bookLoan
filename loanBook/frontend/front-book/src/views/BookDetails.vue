@@ -11,7 +11,7 @@
             <h6 class="card-subtitle">Add by <span style="font-weight: 600;">{{ book.user }}</span></h6>
             <h3 class="box-title mt-5 fs-2">Book description</h3>
             <br />
-            <p v-if="book.description">
+            <p v-if="book.description" class="lh-base text-start">
              <q>{{ book.description }}</q>
             </p>
             <p v-else>
@@ -55,10 +55,11 @@
                   </tbody>
                 </table>
               </div>
-              <div v-if="token && is_staff === 'true'">
-                <button @click="startEditing" class="btn btn-dark" style="width: auto"
+              <div v-if="token && is_staff === 'true' && book.user === username">
+                <button @click="startEditing" class="btn btn-outline-dark" style="width: auto"
                   >Edit book</button
-                >
+                > &nbsp;
+                <button @click="deleteBook" class="btn btn-outline-danger" style="width: auto">Delete book</button>
               </div>
             </div>
             <div class="col-lg-12 col-md-12 col-sm-12" v-else>
@@ -174,14 +175,16 @@
                   <div class="col-6" v-if="type_book !== 'Paper'">
                     <label for="">File of books</label>
                     <input type="file" name="file_book" id="file_book" class="form-control" @change="validateFilePdf"/>
+                    {{ book.pdf_file }}
                   </div>
                   <div class="col-6">
                     <label for="">Image of books</label>
                     <input type="file" name="image_book" id="image_book" class="form-control" @change="validateImage"/>
+                    {{ book.picture_books }}
                   </div>
                   <div class="mt-2">
-                      <button type="submit" class="btn btn-primary">Save Changes</button> &NonBreakingSpace;
-                      <button @click="cancelEditing" class="btn btn-secondary">Cancel</button>
+                      <button type="submit" class="btn btn-outline-primary">Save Changes</button> &NonBreakingSpace;
+                      <button @click="cancelEditing" class="btn btn-outline-secondary">Cancel</button>
                   </div>
                 </div>
               </form>
@@ -189,26 +192,28 @@
           </div>
           <div class="col-lg-5 col-md-5 col-sm-6">
             <div class="white-box text-center">
-              <img v-if="book.picture_books"
+              <img
                 :src="book.picture_books"
-                class="img-responsive" style="width: 100%;"
+                class="img-responsive" style="width: 100%;border-radius: 10px;"
               />
-              <img v-else :src="default_image_url" alt="Default image" srcset="">
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+  <Footer></Footer>
 </template>
 
 <script>
 import { RouterLink } from 'vue-router'
 import Header from '../components/header.vue'
+import Footer from '@/components/Footer.vue'
 import axios from 'axios'
 export default {
   components: {
-    Header
+    Header,
+    Footer
   },
   data() {
     return {
@@ -217,6 +222,7 @@ export default {
       is_staff:localStorage.getItem('is_staff') || '',
       token: localStorage.getItem('token') || '',
       user_id: localStorage.getItem('url') || '',
+      user:'',
       isEditing: false,
       author_book: '',
       title_book: '',
@@ -225,8 +231,8 @@ export default {
       type_book: '',
       status_book: '',
       description : '',
-      file_book: null,
-      image_book: null,
+      file_book: 'null',
+      image_book: 'null',
       errors:{
         author_book: '',
         title_book: '',
@@ -249,7 +255,7 @@ export default {
     if (this.token) {
       requestOptions.headers.Authorization = `Token ${this.token}`;
     }
-    console.log(book_id)
+    // Get all book to fill editing
     axios
       .get(`books/${book_id}/`,requestOptions)
       .then((response) => {
@@ -268,6 +274,8 @@ export default {
       });
   },
   methods: {
+
+    // Displaying and undisplaying file book fiels if book is paper or Numeric  type
     showFileInput(){
       if (this.type_book === 'Paper') {
         this.display_input_file = false;
@@ -275,160 +283,167 @@ export default {
         this.display_input_file = true;
       }
     },
+
+    // Validation du pdf lors de l'upload
     validateFilePdf(event) {
-      const file_book = event.target.files[0];
-      // const maxSize = 5 * 1024 * 1024; // 5MB
-      const allowedTypes = ['application/pdf', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'text/plain'];
-      if (!file_book) {
-        this.errors.file_book = "Please select a file.";
-        return;
+      const file = event.target.files[0]
+      if (file && file.type !== 'application/pdf') {
+        this.errors.file_book = 'The file must be a PDF'
+        this.file_book = null
+      } else {
+        this.errors.file_book = ''
+        this.file_book = file
       }
-
-      if (!allowedTypes.includes(file_book.type)) {
-        this.errors.file_book = "Only PDF, DOCX, and TXT files are allowed.";
-        return;
-      }
-
-      this.file_book = file_book
-      this.errors.file_book = ''
-
-    },
-    validateImage(event) {
-      const image = event.target.files[0];
-      const maxSize = 5 * 1024 * 1024; // 5MB
-      const allowedTypes = ['image/jpeg', 'image/png', 'image/jpg', 'image/svg'];
-      
-      if (!image) {
-        this.errors.image_book = "Please select an image.";
-        return;
-      }
-      
-      if (!allowedTypes.includes(image.type)) {
-        this.errors.image_book = "Only JPG, JPEG, SVG, and PNG files are allowed.";
-        return;
-      }
-      
-      if (image.size > maxSize) {
-        this.errors.image_book = "Image size exceeds the limit (5MB).";
-        return;
-      }
-      this.image_book = image
-      this.errors.image_book = ''
-      
       console.log(this.file_book);
-      console.log(image);
     },
+
+    // Validation de l'image lors de l'upload
+    validateImage(event) {
+      const file = event.target.files[0]
+      const validImageTypes = ['image/jpeg', 'image/png']
+      if (file && !validImageTypes.includes(file.type)) {
+        this.errors.image_book = 'The image must be in JPG or PNG format'
+        this.image_book = null
+      } else {
+        this.errors.image_book = ''
+        this.image_book = file
+      }
+      console.log(this.image_book);
+    },
+
+    // Afficher le formulaire d'édition et cacher le tableau
     startEditing() {
-        // Afficher le formulaire d'édition et cacher le tableau
-        this.author_book = this.book.author;
-        this.title_book = this.book.title;
-        this.year_publication = this.book.year_publication;
-        this.gender_book = this.book.gender;
-        this.type_book = this.book.type_book;
-        this.status_book = this.book.status_book;
-        this.description = this.book.description;
-        this.file_book = this.book.pdf_file
-        this.image_book = this.book.picture_books
-        console.log(this.image_book);
-        console.log(this.file_book);
-        this.isEditing = true;
+      this.author_book = this.book.author;
+      this.title_book = this.book.title;
+      this.year_publication = this.book.year_publication;
+      this.gender_book = this.book.gender;
+      this.type_book = this.book.type_book;
+      this.status_book = this.book.status_book;
+      this.description = this.book.description;
+      this.file_book = this.book.pdf_file
+      this.image_book = this.book.picture_books
+      this.isEditing = true;
     },
+    // Delete selected book
+    async deleteBook(){
+      console.log("deleteBook");
+      try {
+        const response = await axios.delete(`books/${this.$route.params.book_id}/`,
+          {
+            headers: {
+              'Content-Type': 'multipart/form-data',
+              'Authorization': `Token ${this.token}`
+            }
+          }
+        );
+        this.$router.push('/loanbook/dashboard_book_admin');
+
+      } catch (error) {
+        console.log('erreur de suppression');
+
+        if (error.response && error.response.data) {
+          this.errors.wrong_fields = "Oups! Something wrong, please try again";
+        }
+        console.error('Error:', error.response ? error.response.data : error);
+      }
+    },
+    // Save change for editing book
     async saveChanges() {
 
-        if (!this.isEditing) {
-            this.isEditing = true;
+      if (!this.isEditing) {
+        this.isEditing = true;
+      }
+      this.clearErrors();
+      if(this.isValidForm()){
+
+        console.log('😒😒😒😒😒');
+        let formData = new FormData();
+
+        formData.append('user', this.user_id);
+        formData.append('author', this.author_book);
+        formData.append('title', this.title_book);
+        formData.append('year_publication', this.year_publication);
+        formData.append('gender', this.gender_book);
+        formData.append('type_book', this.type_book);
+        formData.append('status_book', this.status_book);
+        formData.append('description', this.description);
+
+        if (this.file_book!== this.book.pdf_file) {
+          formData.append('pdf_file', this.file_book)
         }
-        this.clearErrors();
-        if(this.isValidForm()){
-            console.log('😒😒😒😒😒');
-            let formData = new FormData();
-            
-            // Ajoutez les données de formulaire à FormData
-            formData.append('user', this.user_id);
-            formData.append('author', this.author_book);
-            formData.append('title', this.title_book);
-            formData.append('year_publication', this.year_publication);
-            formData.append('gender', this.gender_book);
-            formData.append('type_book', this.type_book);
-            formData.append('status_book', this.status_book);
-            formData.append('description', this.description);
-            formData.append('pdf_file', this.file_book);
-            formData.append('picture_books', this.image_book);
+        if (this.image_book !== this.book.picture_books ) {
+          formData.append('picture_books', this.image_book)
+        }
 
-            if (this.type_book === 'Numeric') {
-              formData.append('pdf_file', this.file_book);
-            } 
-            try {
-              const response = await axios.put(`books/${this.$route.params.book_id}/`,formData,
-                {
-                  headers: {
-                  Authorization: `Token ${this.token}`,
-                  'Content-Type': 'multipart/form-data'
-                  }
-                }
-              );
-
-              console.log('youpii');
-              console.log(response.data);
-              this.$router.push('home');
-
-            } catch (error) {
-                console.log('nonni');
-
-                if (error.response && error.response.data) {
-                  this.errors.wrong_fields = "Something wrong, please fill the empty fields";
-                }
-                console.error('Error:', error.response ? error.response.data : error);
+        try {
+          const response = await axios.patch(`books/${this.$route.params.book_id}/`,formData,
+            {
+              headers: {
+                'Content-Type': 'multipart/form-data',
+                'Authorization': `Token ${this.token}`
+              }
             }
+          );
+          console.log('Success');
+          this.$router.push('/loanbook/dashboard_book_admin');
+
+        } catch (error) {
+          console.log('Echec');
+          if (error.response && error.response.data) {
+            this.errors.wrong_fields = "Something wrong, please try again";
+          }
+          console.error('Error:', error.response ? error.response.data : error);
         }
+      }
     },
     isValidForm() {
-        let valid = true;
+      let valid = true;
         
-        if (!this.author_book.trim()) {
-            this.errors.author_book = "Author is required";
-            valid = false;
-            console.log('😒oups1');
-        }
-        if (!this.title_book.trim()) {
-            this.errors.title_book = "Title is required";
-            valid = false;
-            console.log('😒oups2');
-        }
-        if (!this.year_publication) {
-            this.errors.year_publication = "year of publication is required";
-            valid = false;
-            console.log('😒oups3');
-        }
-        if (!this.gender_book) {
-            this.errors.gender_book = "Gender is required";
-            valid = false;
-        }
-        if (!this.type_book) {
-            this.errors.type_book = "Type of book is required";
-            valid = false;
-        }
-        if (!this.status_book) {
-            this.errors.status_book = "Status is required";
-            valid = false;
-        }
-        if (!this.description) {
-            this.errors.description = "Description is required";
-            valid = false;
-            console.log('😒oups4');
-        }
-        // if (!this.file_book) {
-        //     this.errors.file_book = "File is required";
-        //     valid = false;
-        //     console.log('😒oups5');
-        // }
-        if (!this.image_book) {
-            this.errors.image_book = "Image is required";
-            valid = false;
-            console.log('😒oups6');
-        }
-        return valid;
+      if (!this.author_book.trim()) {
+        this.errors.author_book = "Author is required";
+        valid = false;
+        console.log('😒oups1');
+      }
+      if (!this.title_book.trim()) {
+        this.errors.title_book = "Title is required";
+        valid = false;
+        console.log('😒oups2');
+      }
+      if (!this.year_publication) {
+        this.errors.year_publication = "year of publication is required";
+        valid = false;
+        console.log('😒oups3');
+      }
+      if (!this.gender_book) {
+        this.errors.gender_book = "Gender is required";
+        valid = false;
+      }
+      if (!this.type_book) {
+        this.errors.type_book = "Type of book is required";
+        valid = false;
+      }
+      if (!this.status_book && !this.book.status_book) {
+        this.errors.status_book = "Status is required";
+        valid = false;
+      }
+      if (!this.description) {
+        this.errors.description = "Description is required";
+        valid = false;
+        console.log('😒oups4');
+      }
+      // if (this.type_book === 'Numeric' && !this.file_book) {
+      //   this.errors.file_book = "File is required";
+      //   valid = false;
+      //   console.log('😒oups5');
+      // }
+      // if (!this.image_book && !this.book.picture_books) {
+      //   this.errors.image_book = "Image is required";
+      //   valid = false;
+      //   console.log('😒oups6');
+      // }
+      return valid;
     },
+    // Clean error after resolve them
     clearErrors() {
       this.errors.author_book = '';
       this.errors.title_book = '';
@@ -437,46 +452,41 @@ export default {
       this.errors.type_book = '';
       this.errors.status_book = '';
       this.errors.description = '';
-    //   this.errors.file_book = '';
+      this.errors.file_book = '';
       this.errors.image_book = '';
       this.errors.wrong_fields = '';
     },
+    // Cancel editing
     cancelEditing() {
-        this.isEditing = false;
+      this.isEditing = false;
     }
 }
 }
 </script>
 
-<style>
+<style scoped>
 .container {
-  margin-top: 1em;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 .card {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  min-width: 0;
-  word-wrap: break-word;
-  background-color: #fff;
-  background-clip: border-box;
-  border: 0 solid transparent;
-  border-radius: 0;
+  margin-bottom: 20px;
 }
-.card .card-subtitle {
-  font-weight: 300;
-  margin-bottom: 10px;
-  color: #8898aa;
+
+.card-body {
+  padding: 20px;
 }
-.table-product.table-striped tbody tr:nth-of-type(odd) {
-  background-color: #f3f8fa !important;
-}
+
 .table-product td {
-  border-top: 0px solid #dee2e6 !important;
-  color: #728299 !important;
+  vertical-align: middle;
 }
-p {
-  line-height: 2;
+
+.white-box img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
 }
 </style>
+
