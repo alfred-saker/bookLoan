@@ -1,5 +1,5 @@
 from django.shortcuts import get_object_or_404
-from django.http import HttpResponse, Http404,FileResponse
+from django.http import HttpResponse, Http404,FileResponse,JsonResponse
 from rest_framework.views import APIView
 from django.conf import settings
 from django.urls import reverse
@@ -12,22 +12,103 @@ from rest_framework.response import Response
 from django.contrib.auth import authenticate,logout,get_user_model
 import os
 
-from backend.models import Book, CustomUser
-from backend.serializer import BookSerializer, ImageUserUpdateSerializer, CustomUserSerializer,PasswordSerializer,LoginSerializer
-from backend.permission import IsAdminOrReadOnly, IsSuperUser
+from backend.models import Book, CustomUser, BookVersion, FavoriteBookUser, Rating, Comment
+from backend.serializer import BookSerializer,BookVersionSerializer, ImageUserUpdateSerializer, CustomUserSerializer,PasswordSerializer,LoginSerializer,FavoriteBookSerializer, RatingBookSerializer, CommentBookSerializer
+from backend.permission import IsAdminOrReadOnly, IsSuperUser, IsAdminOrSuperUserOrOwner,IsBookOwnerOrSuperUser
 
 
+class CommentBookViewSet(viewsets.ModelViewSet):
+    queryset = Comment.objects.all()
+    serializer_class = CommentBookSerializer
+    
+    def get_permissions(self):
+        if self.action in ['create', 'update', 'partial_update', 'destroy']:
+            return [permissions.IsAuthenticated()]
+        else:
+            return [permissions.AllowAny()]
+    
+    def perform_create(self, serializer):
+        serializer.save(user=self.request.user)
+        
+    def destroy(self, request, *args, **kwargs):
+        instance = self.get_object()
+        if instance.user != request.user and not request.user.is_superuser:
+            return Response({"detail": "You do not have permission to delete this rating."}, status=status.HTTP_403_FORBIDDEN)
+        self.perform_destroy(instance)
+        return Response(status=status.HTTP_204_NO_CONTENT)
+
+    def perform_destroy(self, instance):
+        book = instance.book
+        book.rating_sum -= instance.score
+        book.rating_count -= 1
+        book.save()
+        instance.delete()
+
+class RatingBookViewSet(viewsets.ModelViewSet):
+    queryset = Rating.objects.all()
+    serializer_class = RatingBookSerializer
+    permission_classes = [permissions.IsAuthenticated]
+
+    def perform_create(self, serializer):
+        serializer.save(user=self.request.user)
+
+    def update(self, request, *args, **kwargs):
+        instance = self.get_object()
+        if instance.user != request.user:
+            return Response({"detail": "You do not have permission to update this rating."}, status=status.HTTP_403_FORBIDDEN)
+        return super().update(request, *args, **kwargs)
+
+    def destroy(self, request, *args, **kwargs):
+        instance = self.get_object()
+        if instance.user != request.user and not request.user.is_superuser:
+            return Response({"detail": "You do not have permission to delete this rating."}, status=status.HTTP_403_FORBIDDEN)
+        self.perform_destroy(instance)
+        return Response(status=status.HTTP_204_NO_CONTENT)
+
+    def perform_destroy(self, instance):
+        book = instance.book
+        book.rating_sum -= instance.score
+        book.rating_count -= 1
+        book.save()
+        instance.delete()
+
+class FavoriteBookUserViewSet(viewsets.ModelViewSet):
+    queryset = FavoriteBookUser.objects.all()
+    serializer_class = FavoriteBookSerializer
+    permissions_class = [permissions.IsAuthenticated]
+    
+    # J'ajoute un livre en favorie à partir de l'user connecté.
+    def perform_create(self, serializer):
+        serializer.save(user=self.request.user)
+        
+    def destroy(self, request, *args, **kwargs):
+        instance = self.get_object()
+        if instance.user != request.user and not request.user.is_superuser:
+            return Response({"detail": "You do not have permission to delete this favorite."}, status=status.HTTP_403_FORBIDDEN)
+        self.perform_destroy(instance)
+        return Response(status=status.HTTP_204_NO_CONTENT)
+
+    def perform_destroy(self, instance):
+        instance.delete()
+    
+    
 class BookViewSet(viewsets.ModelViewSet):
     queryset = Book.objects.all()
     serializer_class = BookSerializer
     
     def get_permissions(self):
 
-        if self.action in ['create','update','partial_update']:
-            return [IsAdminOrReadOnly(),IsSuperUser(), permissions.IsAuthenticated()]
-        elif self.action in ["retrieve","list"]:
+        if self.action in ['create']:
+            # Pour créer, on pourrait envisager que seuls les utilisateurs authentifiés ou les superutilisateurs puissent créer des livres
+            return [permissions.IsAuthenticated(), IsSuperUser(), IsAdminOrReadOnly()]
+        elif self.action in ['update', 'partial_update']:
+            # Pour mettre à jour, on exige que l'utilisateur soit le propriétaire du livre ou un super-utilisateur
+            return [IsAdminOrSuperUserOrOwner()]
+        elif self.action in ['retrieve', 'list']:
+            # Pour lire ou lister, tous les utilisateurs peuvent accéder
             return [permissions.AllowAny()]
         else:
+            # Pour toutes les autres actions, l'accès est donné aux utilisateurs authentifiés
             return [permissions.IsAuthenticated()]
         
     def destroy(self, request, *args, **kwargs):
@@ -41,17 +122,43 @@ class BookViewSet(viewsets.ModelViewSet):
         instance.delete()
         print('delete')
     
+class BookVersionViewSet(viewsets.ModelViewSet):
+    queryset = BookVersion.objects.all()
+    serializer_class = BookVersionSerializer
+    
+    def get_permissions(self):
 
+        if self.action in ['create']:
+            # Pour créer, on pourrait envisager que seuls les utilisateurs authentifiés ou les superutilisateurs puissent créer des versions de livres
+            return [permissions.IsAuthenticated(), IsSuperUser(), IsAdminOrReadOnly()]
+        elif self.action in ['update', 'partial_update']:
+            # Pour mettre à jour, on exige que l'utilisateur soit le propriétaire du livre ou un super-utilisateur
+            return [IsBookOwnerOrSuperUser()]
+        elif self.action in ['retrieve', 'list']:
+            # Pour lire ou lister, tous les utilisateurs peuvent accéder
+            return [permissions.AllowAny()]
+        else:
+            # Pour toutes les autres actions, l'accès est donné aux utilisateurs authentifiés
+            return [permissions.IsAuthenticated()]
+        
+    def destroy(self, request, *args, **kwargs):
+        instance = self.get_object()
+        if instance.book.user !=request.user and not request.user.is_superuser:  
+            return Response({"detail": "You do not have permission to delete this book versions."}, status=status.HTTP_403_FORBIDDEN)
+        self.perform_destroy(instance)
+        return Response(status=status.HTTP_204_NO_CONTENT)
+
+    def perform_destroy(self, instance):
+        instance.delete()
+        print('delete')
 
 class CustomUserViewSet(viewsets.ModelViewSet):
     queryset = CustomUser.objects.all()
     serializer_class = CustomUserSerializer
-    lookup_field = 'id'
+    lookup_field = 'pk'
     
     def get_permissions(self):
-        """
-        Instantier et retourner la liste des permissions que cette vue requiert.
-        """
+
         if self.action in ['create']:
             return [permissions.AllowAny()]
         elif self.action in ["retrieve","list"]:
@@ -94,7 +201,17 @@ class CustomUserViewSet(viewsets.ModelViewSet):
             return Response(data, status=status.HTTP_200_OK)
         else:
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+        
+    def destroy(self, request, *args, **kwargs):
+        instance = self.get_object()
+        if not request.user.is_superuser:  
+            return Response({"detail": "You do not have permission to delete this user."}, status=status.HTTP_403_FORBIDDEN)
+        self.perform_destroy(instance)
+        return Response(status=status.HTTP_204_NO_CONTENT)
 
+    def perform_destroy(self, instance):
+        instance.delete()
+        print('delete')
 
         
 class LoginViewSet(APIView):
@@ -138,33 +255,24 @@ class LogoutViewSet(APIView):
         return Response({"success": "Successfully logged out"}, status=status.HTTP_200_OK)
 
 
-
-
-
-# class BorrowViewSet(viewsets.ModelViewSet):
-#     queryset = Borrow.objects.all()
-#     serializer_class = EmpruntSerializer
-#     authentication_classes = [TokenAuthentication]
-#     def get_queryset(self):
-#         if self.request.user.is_authenticated:
-#             user = self.request.user
-#             # Filtrer les emprunts en fonction de l'utilisateur actuellement authentifié
-#             return Borrow.objects.filter(user=user)
-#         else:
-#             # Si l'utilisateur n'est pas authentifié, renvoyer un queryset vide
-#             return Borrow.objects.none()
-
 class DownloadBook(APIView):
     authentication_classes = [TokenAuthentication]
-    def get(self, request, pk):
+    def get(self, request, pk, file_type):
         # Récupérer le livre par son ID
         book = get_object_or_404(Book, pk=pk)
 
-        # Chemin du fichier PDF
-        file_path = os.path.join(settings.MEDIA_ROOT, book.pdf_file.name)
-
-        # Debug: Afficher le chemin du fichier
-        print(f"Chemin du fichier: {file_path}")
+        # Déterminer le chemin du fichier en fonction du type de fichier demandé
+        if file_type == 'pdf':
+            file_path = os.path.join(settings.MEDIA_ROOT, book.pdf_file.name)
+            content_type = 'application/pdf'
+        elif file_type == 'audio':
+            file_path = os.path.join(settings.MEDIA_ROOT, book.audio_file.name)
+            content_type = 'audio/mpeg'
+        elif file_type == 'ebook':
+            file_path = os.path.join(settings.MEDIA_ROOT, book.ebook_file.name)
+            content_type = 'application/epub+zip'
+        else:
+            raise Http404("Type de fichier non supporté")
 
         # Vérifier que le fichier existe
         if not os.path.exists(file_path):
@@ -176,7 +284,7 @@ class DownloadBook(APIView):
 
         # Créer la réponse HTTP pour le téléchargement du fichier
         with open(file_path, 'rb') as file:
-            response = HttpResponse(file.read(), content_type='application/pdf')
+            response = HttpResponse(file.read(), content_type=content_type)
             response['Content-Disposition'] = f'attachment; filename={os.path.basename(file_path)}'
 
         # Incrémenter le compteur de téléchargements
@@ -185,29 +293,9 @@ class DownloadBook(APIView):
 
         return response
 
-
-# class UserChangePasswordView(APIView):
-#     authentication_classes = [TokenAuthentication]
-#     permission_classes = [IsAdminOrReadOnly]
-#     def patch(self, request, pk):
-#         User = get_user_model()
-        
-#         user = User.objects.get(pk=pk)
-#         serializer = ChangePasswordSerializer(data=request.data)
-
-#         if serializer.is_valid():
-#             old_password = serializer.validated_data.get('old_password')
-#             new_password = serializer.validated_data.get('new_password')
-#             # Vérifier l'ancien mot de passe
-#             if not user.check_password(old_password):
-#                 return Response({'error': 'Invalid old password'}, status=status.HTTP_400_BAD_REQUEST)
-
-#             # Mettre à jour le mot de passe de l'utilisateur
-#             user.set_password(new_password)
-#             user.save()
-
-#             return Response({'success': 'Password changed successfully'}, status=status.HTTP_200_OK)
-#         else:
-#             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-
-# userdjango2024 - saker
+def custom_404_view(request, exception=None):
+    response_data = {
+        "error": "Page not found",
+        "status_code": 404
+    }
+    return JsonResponse(response_data, status=404)

@@ -4,6 +4,7 @@ from django.db import models
 from django.contrib.auth.models import AbstractUser
 from loanBook.settings import AUTH_USER_MODEL as User_model
 from django.utils.text import slugify
+from django.core.validators import MaxValueValidator, MinValueValidator
 
 class CustomUser(AbstractUser):
     USER_TYPE_CHOICES = (
@@ -72,32 +73,35 @@ class Book(models.Model):
         return self.rating_sum / self.rating_count
 
 class Rating(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     book = models.ForeignKey(Book, related_name='ratings', on_delete=models.CASCADE)
     user = models.ForeignKey(User_model, on_delete=models.CASCADE)
-    score = models.PositiveSmallIntegerField()  # Vous pouvez limiter cela à un score maximal, par exemple 1-5
+    score = models.PositiveSmallIntegerField(validators=[MinValueValidator(1), MaxValueValidator(5)])  # Vous pouvez limiter cela à un score maximal, par exemple 1-5
 
     class Meta:
         unique_together = (('user', 'book'),)  # S'assurer qu'un utilisateur ne peut noter qu'une seule fois un livre
 
     def save(self, *args, **kwargs):
-        super().save(*args, **kwargs)
-        if self.pk:  # Vérifie que c'est une création de note et non une mise à jour
-            book = self.book
-            book.rating_sum += self.score
-            book.rating_count += 1
-            book.save()
-    
+        if self.pk:
+            try:
+                previous = Rating.objects.get(pk=self.pk)
+                self.book.rating_sum -= previous.score
+            except Rating.DoesNotExist:
+                previous = None
 
-class FavoriteBookUser(models.Model):
-    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
-    user = models.ForeignKey(User_model, on_delete=models.CASCADE)
-    book = models.ForeignKey(Book,on_delete=models.CASCADE)
-    created_at = models.DateTimeField(auto_now_add=True)
-    
+        super().save(*args, **kwargs)
+        
+        # Si la note précédente n'existe pas, nous sommes en train de créer une nouvelle évaluation
+        if not self.pk:
+          self.book.rating_count += 1
+
+        self.book.rating_sum += self.score
+        self.book.save()
+
     
     def __str__(self):
-        return f"{self.book.title} put favorite by {self.user.username}"
-    
+        return self.book.title
+
 class Comment(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
@@ -108,6 +112,7 @@ class Comment(models.Model):
 
     def __str__(self):
         return f'Comment by {self.user.username} on {self.book.title}'
+
 
 class BookVersion(models.Model):
     BOOK_TYPES = (
@@ -120,11 +125,12 @@ class BookVersion(models.Model):
     book = models.ForeignKey(Book, related_name='versions', on_delete=models.CASCADE)
     book_type = models.CharField(max_length=10, choices=BOOK_TYPES)
     language = models.CharField(max_length=30)
-    file = models.FileField(upload_to='book_versions/')
-    picture_file = models.FileField(upload_to='book_versions/covers/')
+    file = models.FileField(upload_to='book_versions/', max_length=255)
+    picture_file = models.FileField(upload_to='book_versions/covers/', max_length=255)
     number_pages = models.PositiveIntegerField(default=0, blank=True, null=True)
     time_read_book = models.PositiveIntegerField(default=0, blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
     
     class Meta:
         unique_together = (('book', 'book_type', 'language'),)  
@@ -133,6 +139,23 @@ class BookVersion(models.Model):
     def __str__(self):
         return f"{self.book.title} - {self.language} ({self.book_type})"
 
+
+class FavoriteBookUser(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    user = models.ForeignKey(User_model, on_delete=models.CASCADE)
+    book = models.ForeignKey(Book, on_delete=models.CASCADE, null=True, blank=True)
+    book_version = models.ForeignKey(BookVersion, on_delete=models.CASCADE, null=True, blank=True)
+    is_favorite = models.BooleanField(default=False)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    
+    class Meta:
+        unique_together = (('user', 'book'), ('user', 'book_version'))  
+
+    def __str__(self):
+        if self.book_version:
+            return f"{self.book_version} version favorited by {self.user.username}"
+        return f"{self.book.title} book favorited by {self.user.username}"
     
     
     
