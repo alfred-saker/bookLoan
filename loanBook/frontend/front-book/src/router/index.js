@@ -10,25 +10,48 @@ import User from '@/views/User.vue'
 import ChartVue from '@/views/ChartVue.vue'
 import { isAuthenticated } from '@/auth.js'
 
-import Dashboard_book_admin from '../views/Dashboard_book_admin.vue'
+import Dashboard_book_admin from '../views/admin/Dashboard.vue'
+import About from '../components/admin/AboutContent.vue'
+import Contact from '../components/admin/ContactContent.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     // Unprotected router
-    {
-      path: '/loanbook/home',
-      name: 'home',
-      component: Home
-    },
+
+    { path: '/', component: Home },
+    { path: '/about', component: About },
+    { path: '/contact', component: Contact },
+
+    // {
+    //   path: '/loanbook/home',
+    //   name: 'home',
+    //   component: Home
+    // },
     {
       path: '/loanbook/admin/dashboard_book_admin',
       name: 'dashboard_book_admin',
       component: Dashboard_book_admin,
-      meta:{
-        needAuth:true
-      }
+      // meta:{
+      //   needAuth:true
+      // }
     },
+    // {
+    //   path: '/loanbook/admin/category_book',
+    //   name: 'category_book',
+    //   component: Category_book,
+    //   meta:{
+    //     needAuth:true
+    //   }
+    // },
+    // {
+    //   path: '/loanbook/admin/statistic_global',
+    //   name: 'statistic_global',
+    //   component: Statistic_global,
+    //   meta:{
+    //     needAuth:true
+    //   }
+    // },
     {
       path:'/loanbook/about_us',
       name:'about_us',

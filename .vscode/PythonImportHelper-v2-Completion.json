@@ -149,11 +149,124 @@
         "documentation": {}
     },
     {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
         "label": "models",
         "importPath": "django.db",
         "description": "django.db",
         "isExtraImport": true,
         "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "django.core.validators",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "django.core.validators",
+        "description": "django.core.validators",
+        "detail": "django.core.validators",
+        "documentation": {}
+    },
+    {
+        "label": "MaxValueValidator",
+        "importPath": "django.core.validators",
+        "description": "django.core.validators",
+        "isExtraImport": true,
+        "detail": "django.core.validators",
+        "documentation": {}
+    },
+    {
+        "label": "MinValueValidator",
+        "importPath": "django.core.validators",
+        "description": "django.core.validators",
+        "isExtraImport": true,
+        "detail": "django.core.validators",
         "documentation": {}
     },
     {
@@ -234,6 +347,54 @@
         "description": "backend.models",
         "isExtraImport": true,
         "detail": "backend.models",
+        "documentation": {}
+    },
+    {
+        "label": "BookVersion",
+        "importPath": "backend.models",
+        "description": "backend.models",
+        "isExtraImport": true,
+        "detail": "backend.models",
+        "documentation": {}
+    },
+    {
+        "label": "FavoriteBookUser",
+        "importPath": "backend.models",
+        "description": "backend.models",
+        "isExtraImport": true,
+        "detail": "backend.models",
+        "documentation": {}
+    },
+    {
+        "label": "Rating",
+        "importPath": "backend.models",
+        "description": "backend.models",
+        "isExtraImport": true,
+        "detail": "backend.models",
+        "documentation": {}
+    },
+    {
+        "label": "Comment",
+        "importPath": "backend.models",
+        "description": "backend.models",
+        "isExtraImport": true,
+        "detail": "backend.models",
+        "documentation": {}
+    },
+    {
+        "label": "gettext_lazy",
+        "importPath": "django.utils.translation",
+        "description": "django.utils.translation",
+        "isExtraImport": true,
+        "detail": "django.utils.translation",
+        "documentation": {}
+    },
+    {
+        "label": "gettext",
+        "importPath": "django.utils.translation",
+        "description": "django.utils.translation",
+        "isExtraImport": true,
+        "detail": "django.utils.translation",
         "documentation": {}
     },
     {
@@ -398,14 +559,6 @@
         "documentation": {}
     },
     {
-        "label": "gettext",
-        "importPath": "django.utils.translation",
-        "description": "django.utils.translation",
-        "isExtraImport": true,
-        "detail": "django.utils.translation",
-        "documentation": {}
-    },
-    {
         "label": "get_object_or_404",
         "importPath": "django.shortcuts",
         "description": "django.shortcuts",
@@ -431,6 +584,14 @@
     },
     {
         "label": "FileResponse",
+        "importPath": "django.http",
+        "description": "django.http",
+        "isExtraImport": true,
+        "detail": "django.http",
+        "documentation": {}
+    },
+    {
+        "label": "JsonResponse",
         "importPath": "django.http",
         "description": "django.http",
         "isExtraImport": true,
@@ -518,6 +679,14 @@
         "documentation": {}
     },
     {
+        "label": "BookVersionSerializer",
+        "importPath": "backend.serializer",
+        "description": "backend.serializer",
+        "isExtraImport": true,
+        "detail": "backend.serializer",
+        "documentation": {}
+    },
+    {
         "label": "ImageUserUpdateSerializer",
         "importPath": "backend.serializer",
         "description": "backend.serializer",
@@ -550,6 +719,30 @@
         "documentation": {}
     },
     {
+        "label": "FavoriteBookSerializer",
+        "importPath": "backend.serializer",
+        "description": "backend.serializer",
+        "isExtraImport": true,
+        "detail": "backend.serializer",
+        "documentation": {}
+    },
+    {
+        "label": "RatingBookSerializer",
+        "importPath": "backend.serializer",
+        "description": "backend.serializer",
+        "isExtraImport": true,
+        "detail": "backend.serializer",
+        "documentation": {}
+    },
+    {
+        "label": "CommentBookSerializer",
+        "importPath": "backend.serializer",
+        "description": "backend.serializer",
+        "isExtraImport": true,
+        "detail": "backend.serializer",
+        "documentation": {}
+    },
+    {
         "label": "IsAdminOrReadOnly",
         "importPath": "backend.permission",
         "description": "backend.permission",
@@ -559,6 +752,22 @@
     },
     {
         "label": "IsSuperUser",
+        "importPath": "backend.permission",
+        "description": "backend.permission",
+        "isExtraImport": true,
+        "detail": "backend.permission",
+        "documentation": {}
+    },
+    {
+        "label": "IsAdminOrSuperUserOrOwner",
+        "importPath": "backend.permission",
+        "description": "backend.permission",
+        "isExtraImport": true,
+        "detail": "backend.permission",
+        "documentation": {}
+    },
+    {
+        "label": "IsBookOwnerOrSuperUser",
         "importPath": "backend.permission",
         "description": "backend.permission",
         "isExtraImport": true,
@@ -663,6 +872,46 @@
         "documentation": {}
     },
     {
+        "label": "BookVersionViewSet",
+        "importPath": "backend.views",
+        "description": "backend.views",
+        "isExtraImport": true,
+        "detail": "backend.views",
+        "documentation": {}
+    },
+    {
+        "label": "FavoriteBookUserViewSet",
+        "importPath": "backend.views",
+        "description": "backend.views",
+        "isExtraImport": true,
+        "detail": "backend.views",
+        "documentation": {}
+    },
+    {
+        "label": "RatingBookViewSet",
+        "importPath": "backend.views",
+        "description": "backend.views",
+        "isExtraImport": true,
+        "detail": "backend.views",
+        "documentation": {}
+    },
+    {
+        "label": "CommentBookViewSet",
+        "importPath": "backend.views",
+        "description": "backend.views",
+        "isExtraImport": true,
+        "detail": "backend.views",
+        "documentation": {}
+    },
+    {
+        "label": "custom_404_view",
+        "importPath": "backend.views",
+        "description": "backend.views",
+        "isExtraImport": true,
+        "detail": "backend.views",
+        "documentation": {}
+    },
+    {
         "label": "get_wsgi_application",
         "importPath": "django.core.wsgi",
         "description": "django.core.wsgi",
@@ -725,6 +974,87 @@
         "documentation": {}
     },
     {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "loanBook.backend.migrations.0006_favoritebookuser_book_version_and_more",
+        "description": "loanBook.backend.migrations.0006_favoritebookuser_book_version_and_more",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('backend', '0005_rename_uuid_customuser_id'),\n    ]\n    operations = [\n        migrations.AddField(\n            model_name='favoritebookuser',\n            name='book_version',\n            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, to='backend.bookversion'),\n        ),",
+        "detail": "loanBook.backend.migrations.0006_favoritebookuser_book_version_and_more",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "loanBook.backend.migrations.0007_bookversion_updated_at",
+        "description": "loanBook.backend.migrations.0007_bookversion_updated_at",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('backend', '0006_favoritebookuser_book_version_and_more'),\n    ]\n    operations = [\n        migrations.AddField(\n            model_name='bookversion',\n            name='updated_at',\n            field=models.DateTimeField(auto_now=True),\n        ),",
+        "detail": "loanBook.backend.migrations.0007_bookversion_updated_at",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "loanBook.backend.migrations.0008_alter_bookversion_file_and_more",
+        "description": "loanBook.backend.migrations.0008_alter_bookversion_file_and_more",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('backend', '0007_bookversion_updated_at'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='bookversion',\n            name='file',\n            field=models.FileField(max_length=255, upload_to='book_versions/'),\n        ),",
+        "detail": "loanBook.backend.migrations.0008_alter_bookversion_file_and_more",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "loanBook.backend.migrations.0009_alter_favoritebookuser_unique_together",
+        "description": "loanBook.backend.migrations.0009_alter_favoritebookuser_unique_together",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('backend', '0008_alter_bookversion_file_and_more'),\n    ]\n    operations = [\n        migrations.AlterUniqueTogether(\n            name='favoritebookuser',\n            unique_together={('user', 'book'), ('user', 'book_version')},\n        ),\n    ]",
+        "detail": "loanBook.backend.migrations.0009_alter_favoritebookuser_unique_together",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "loanBook.backend.migrations.0010_alter_rating_score",
+        "description": "loanBook.backend.migrations.0010_alter_rating_score",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('backend', '0009_alter_favoritebookuser_unique_together'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='rating',\n            name='score',\n            field=models.PositiveSmallIntegerField(validators=[django.core.validators.MinValueValidator(1), django.core.validators.MaxValueValidator(5)]),\n        ),",
+        "detail": "loanBook.backend.migrations.0010_alter_rating_score",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "loanBook.backend.migrations.0011_alter_rating_id",
+        "description": "loanBook.backend.migrations.0011_alter_rating_id",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('backend', '0010_alter_rating_score'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='rating',\n            name='id',\n            field=models.UUIDField(default=uuid.uuid4, editable=False, primary_key=True, serialize=False),\n        ),",
+        "detail": "loanBook.backend.migrations.0011_alter_rating_id",
+        "documentation": {}
+    },
+    {
+        "label": "admin.site.site_header",
+        "kind": 5,
+        "importPath": "loanBook.backend.admin",
+        "description": "loanBook.backend.admin",
+        "peekOfCode": "admin.site.site_header = _(\"BookLoan Admin \")\nadmin.site.site_title = _(\"BookLoan Admin\")\nadmin.site.index_title = _(\"Welcome to BookLoan Administration\")\nadmin.site.register(Book)\nadmin.site.register(BookVersion)\nadmin.site.register(CustomUser)\nadmin.site.register(Rating)\nadmin.site.register(FavoriteBookUser)\nadmin.site.register(Comment)",
+        "detail": "loanBook.backend.admin",
+        "documentation": {}
+    },
+    {
+        "label": "admin.site.site_title",
+        "kind": 5,
+        "importPath": "loanBook.backend.admin",
+        "description": "loanBook.backend.admin",
+        "peekOfCode": "admin.site.site_title = _(\"BookLoan Admin\")\nadmin.site.index_title = _(\"Welcome to BookLoan Administration\")\nadmin.site.register(Book)\nadmin.site.register(BookVersion)\nadmin.site.register(CustomUser)\nadmin.site.register(Rating)\nadmin.site.register(FavoriteBookUser)\nadmin.site.register(Comment)",
+        "detail": "loanBook.backend.admin",
+        "documentation": {}
+    },
+    {
+        "label": "admin.site.index_title",
+        "kind": 5,
+        "importPath": "loanBook.backend.admin",
+        "description": "loanBook.backend.admin",
+        "peekOfCode": "admin.site.index_title = _(\"Welcome to BookLoan Administration\")\nadmin.site.register(Book)\nadmin.site.register(BookVersion)\nadmin.site.register(CustomUser)\nadmin.site.register(Rating)\nadmin.site.register(FavoriteBookUser)\nadmin.site.register(Comment)",
+        "detail": "loanBook.backend.admin",
+        "documentation": {}
+    },
+    {
         "label": "BackendConfig",
         "kind": 6,
         "importPath": "loanBook.backend.apps",
@@ -756,16 +1086,7 @@
         "kind": 6,
         "importPath": "loanBook.backend.models",
         "description": "loanBook.backend.models",
-        "peekOfCode": "class Rating(models.Model):\n    book = models.ForeignKey(Book, related_name='ratings', on_delete=models.CASCADE)\n    user = models.ForeignKey(User_model, on_delete=models.CASCADE)\n    score = models.PositiveSmallIntegerField()  # Vous pouvez limiter cela à un score maximal, par exemple 1-5\n    class Meta:\n        unique_together = (('user', 'book'),)  # S'assurer qu'un utilisateur ne peut noter qu'une seule fois un livre\n    def save(self, *args, **kwargs):\n        super().save(*args, **kwargs)\n        if self.pk:  # Vérifie que c'est une création de note et non une mise à jour\n            book = self.book",
-        "detail": "loanBook.backend.models",
-        "documentation": {}
-    },
-    {
-        "label": "FavoriteBookUser",
-        "kind": 6,
-        "importPath": "loanBook.backend.models",
-        "description": "loanBook.backend.models",
-        "peekOfCode": "class FavoriteBookUser(models.Model):\n    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)\n    user = models.ForeignKey(User_model, on_delete=models.CASCADE)\n    book = models.ForeignKey(Book,on_delete=models.CASCADE)\n    created_at = models.DateTimeField(auto_now_add=True)\n    def __str__(self):\n        return f\"{self.book.title} put favorite by {self.user.username}\"\nclass Comment(models.Model):\n    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)\n    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)",
+        "peekOfCode": "class Rating(models.Model):\n    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)\n    book = models.ForeignKey(Book, related_name='ratings', on_delete=models.CASCADE)\n    user = models.ForeignKey(User_model, on_delete=models.CASCADE)\n    score = models.PositiveSmallIntegerField(validators=[MinValueValidator(1), MaxValueValidator(5)])  # Vous pouvez limiter cela à un score maximal, par exemple 1-5\n    class Meta:\n        unique_together = (('user', 'book'),)  # S'assurer qu'un utilisateur ne peut noter qu'une seule fois un livre\n    def save(self, *args, **kwargs):\n        if self.pk:\n            try:",
         "detail": "loanBook.backend.models",
         "documentation": {}
     },
@@ -788,11 +1109,20 @@
         "documentation": {}
     },
     {
+        "label": "FavoriteBookUser",
+        "kind": 6,
+        "importPath": "loanBook.backend.models",
+        "description": "loanBook.backend.models",
+        "peekOfCode": "class FavoriteBookUser(models.Model):\n    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)\n    user = models.ForeignKey(User_model, on_delete=models.CASCADE)\n    book = models.ForeignKey(Book, on_delete=models.CASCADE, null=True, blank=True)\n    book_version = models.ForeignKey(BookVersion, on_delete=models.CASCADE, null=True, blank=True)\n    is_favorite = models.BooleanField(default=False)\n    created_at = models.DateTimeField(auto_now_add=True)\n    updated_at = models.DateTimeField(auto_now=True)\n    class Meta:\n        unique_together = (('user', 'book'), ('user', 'book_version'))  ",
+        "detail": "loanBook.backend.models",
+        "documentation": {}
+    },
+    {
         "label": "IsAdminOrReadOnly",
         "kind": 6,
         "importPath": "loanBook.backend.permission",
         "description": "loanBook.backend.permission",
-        "peekOfCode": "class IsAdminOrReadOnly(permissions.BasePermission):\n    def has_permission(self, request, view):\n        if request.method in permissions.SAFE_METHODS:\n            return request.user\n        return request.user and request.user.is_authenticated and (request.user.is_staff or request.user.is_superuser)\nclass IsSuperUser(permissions.BasePermission):\n    def has_permission(self, request, view):\n        return request.user and request.user.is_superuser and request.user.is_authenticated",
+        "peekOfCode": "class IsAdminOrReadOnly(permissions.BasePermission):\n    def has_permission(self, request, view):\n        if request.method in permissions.SAFE_METHODS:\n            return request.user\n        return request.user and request.user.is_authenticated and (request.user.is_staff or request.user.is_superuser)\n# Je verifie si l'utilisateur est un super-user \nclass IsSuperUser(permissions.BasePermission):\n    def has_permission(self, request, view):\n        return request.user and request.user.is_superuser and request.user.is_authenticated\n# Seul les admins des livres et les superuser peuvent mettre à jour un livre",
         "detail": "loanBook.backend.permission",
         "documentation": {}
     },
@@ -801,8 +1131,53 @@
         "kind": 6,
         "importPath": "loanBook.backend.permission",
         "description": "loanBook.backend.permission",
-        "peekOfCode": "class IsSuperUser(permissions.BasePermission):\n    def has_permission(self, request, view):\n        return request.user and request.user.is_superuser and request.user.is_authenticated",
+        "peekOfCode": "class IsSuperUser(permissions.BasePermission):\n    def has_permission(self, request, view):\n        return request.user and request.user.is_superuser and request.user.is_authenticated\n# Seul les admins des livres et les superuser peuvent mettre à jour un livre\nclass IsAdminOrSuperUserOrOwner(permissions.BasePermission):\n    def has_object_permission(self, request, view, obj):\n        # Autoriser les méthodes safe (lecture seule) pour tous les utilisateurs.\n        if request.method in permissions.SAFE_METHODS:\n            return True\n        # Autoriser la mise à jour si l'utilisateur est le propriétaire du livre ou un super-utilisateur.",
         "detail": "loanBook.backend.permission",
+        "documentation": {}
+    },
+    {
+        "label": "IsAdminOrSuperUserOrOwner",
+        "kind": 6,
+        "importPath": "loanBook.backend.permission",
+        "description": "loanBook.backend.permission",
+        "peekOfCode": "class IsAdminOrSuperUserOrOwner(permissions.BasePermission):\n    def has_object_permission(self, request, view, obj):\n        # Autoriser les méthodes safe (lecture seule) pour tous les utilisateurs.\n        if request.method in permissions.SAFE_METHODS:\n            return True\n        # Autoriser la mise à jour si l'utilisateur est le propriétaire du livre ou un super-utilisateur.\n        return obj.user == request.user or request.user.is_superuser\nclass IsBookOwnerOrSuperUser(permissions.BasePermission):\n    def has_object_permission(self, request, view, obj):\n        # Vérifiez si l'utilisateur est l'auteur du livre ou un superutilisateur",
+        "detail": "loanBook.backend.permission",
+        "documentation": {}
+    },
+    {
+        "label": "IsBookOwnerOrSuperUser",
+        "kind": 6,
+        "importPath": "loanBook.backend.permission",
+        "description": "loanBook.backend.permission",
+        "peekOfCode": "class IsBookOwnerOrSuperUser(permissions.BasePermission):\n    def has_object_permission(self, request, view, obj):\n        # Vérifiez si l'utilisateur est l'auteur du livre ou un superutilisateur\n        return obj.book.user == request.user or request.user.is_superuser",
+        "detail": "loanBook.backend.permission",
+        "documentation": {}
+    },
+    {
+        "label": "CommentBookSerializer",
+        "kind": 6,
+        "importPath": "loanBook.backend.serializer",
+        "description": "loanBook.backend.serializer",
+        "peekOfCode": "class CommentBookSerializer(serializers.HyperlinkedModelSerializer):\n    replies = serializers.SerializerMethodField()\n    user = serializers.HyperlinkedRelatedField(\n        view_name = \"user-detail\",\n        read_only = True,\n        lookup_field = 'pk'\n    )\n    book = serializers.HyperlinkedRelatedField(\n        view_name=\"book-detail\",\n        queryset=Book.objects.all(),",
+        "detail": "loanBook.backend.serializer",
+        "documentation": {}
+    },
+    {
+        "label": "RatingBookSerializer",
+        "kind": 6,
+        "importPath": "loanBook.backend.serializer",
+        "description": "loanBook.backend.serializer",
+        "peekOfCode": "class RatingBookSerializer(serializers.HyperlinkedModelSerializer):\n    user = serializers.HyperlinkedRelatedField(\n        view_name=\"user-detail\",\n        read_only = True,\n        lookup_field = 'pk'\n    )\n    book = serializers.HyperlinkedRelatedField(\n        view_name=\"book-detail\",\n        queryset = Book.objects.all(),\n        lookup_field = \"pk\"",
+        "detail": "loanBook.backend.serializer",
+        "documentation": {}
+    },
+    {
+        "label": "FavoriteBookSerializer",
+        "kind": 6,
+        "importPath": "loanBook.backend.serializer",
+        "description": "loanBook.backend.serializer",
+        "peekOfCode": "class FavoriteBookSerializer(serializers.HyperlinkedModelSerializer):\n    user = serializers.HyperlinkedRelatedField(\n        view_name = \"user-detail\",\n        read_only = True,\n        lookup_field = \"pk\"\n    )\n    book = serializers.HyperlinkedRelatedField(\n        view_name=\"book-detail\",\n        queryset=Book.objects.all(),\n        lookup_field='pk' ,",
+        "detail": "loanBook.backend.serializer",
         "documentation": {}
     },
     {
@@ -810,7 +1185,7 @@
         "kind": 6,
         "importPath": "loanBook.backend.serializer",
         "description": "loanBook.backend.serializer",
-        "peekOfCode": "class BookVersionSerializer(serializers.HyperlinkedModelSerializer):\n    class Meta:\n        models=BookVersion\n        fields = '__all__'\n        exclude = ['created_at']\n    def Validate_data(self, data):\n        if not data.get(\"book\"):\n            raise serializers.ValidateError(\"Book:Book is required\")\n        if not data.get(\"book_type\"):\n            raise serializers.ValidationError(\"Book Type: Book type is required\")",
+        "peekOfCode": "class BookVersionSerializer(serializers.HyperlinkedModelSerializer):\n    book = serializers.HyperlinkedRelatedField(\n        view_name='book-detail',\n        queryset=Book.objects.all(),\n        lookup_field='pk' \n    )\n    class Meta:\n        model = BookVersion\n        exclude = ['created_at', 'updated_at']\n    def validate(self, data):",
         "detail": "loanBook.backend.serializer",
         "documentation": {}
     },
@@ -819,7 +1194,7 @@
         "kind": 6,
         "importPath": "loanBook.backend.serializer",
         "description": "loanBook.backend.serializer",
-        "peekOfCode": "class BookSerializer(serializers.HyperlinkedModelSerializer):\n    user = serializers.HyperlinkedRelatedField(\n        view_name='user-detail',\n        read_only=True,\n        lookup_field='id' \n    )\n    class Meta:\n        model = Book\n        fields = ['url', 'author', 'summary','title', 'year_publication','download_count','category','user','slug','rating_sum','rating_count','id']\n        read_only_fields = [\"id\",\"slug\",\"rating_sum\",\"download_count\"]",
+        "peekOfCode": "class BookSerializer(serializers.HyperlinkedModelSerializer):\n    user = serializers.HyperlinkedRelatedField(\n        view_name='user-detail',\n        read_only=True,\n        lookup_field='pk' \n    )\n    comments = CommentBookSerializer(many=True, read_only=True)\n    class Meta:\n        model = Book\n        fields = ['url', 'author', 'summary','title', 'year_publication','download_count','category','user','slug','rating_sum','rating_count','id','comments']",
         "detail": "loanBook.backend.serializer",
         "documentation": {}
     },
@@ -828,7 +1203,7 @@
         "kind": 6,
         "importPath": "loanBook.backend.serializer",
         "description": "loanBook.backend.serializer",
-        "peekOfCode": "class CustomUserSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = CustomUser\n        fields = ['url', 'username', 'first_name','last_name', 'email', 'user_type', 'biography', 'phone_number', 'country', 'total_book_download', 'image', 'created_at','password']\n        read_only_fields = ['total_book_download', 'created_at']\n        extra_kwargs = {\n            'password': {'write_only': True},\n            'url': {'view_name': 'user-detail', 'lookup_field': 'pk'}\n        }\n    # Je crée une fois le user de base avec un role de niveau 2 par defaut.",
+        "peekOfCode": "class CustomUserSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = CustomUser\n        fields = ['url', 'username', 'first_name','last_name', 'email', 'user_type', 'biography', 'phone_number', 'country', 'total_book_download', 'image', 'created_at','password','is_staff']\n        read_only_fields = ['total_book_download', 'created_at']\n        extra_kwargs = {\n            'password': {'write_only': True},\n            'url': {'view_name': 'user-detail', 'lookup_field': 'pk'}\n        }\n    # Je crée une fois le user de base avec un role de niveau 2 par defaut.",
         "detail": "loanBook.backend.serializer",
         "documentation": {}
     },
@@ -864,7 +1239,7 @@
         "kind": 5,
         "importPath": "loanBook.backend.serializer",
         "description": "loanBook.backend.serializer",
-        "peekOfCode": "User = get_user_model()\nclass BookVersionSerializer(serializers.HyperlinkedModelSerializer):\n    class Meta:\n        models=BookVersion\n        fields = '__all__'\n        exclude = ['created_at']\n    def Validate_data(self, data):\n        if not data.get(\"book\"):\n            raise serializers.ValidateError(\"Book:Book is required\")\n        if not data.get(\"book_type\"):",
+        "peekOfCode": "User = get_user_model()\nclass CommentBookSerializer(serializers.HyperlinkedModelSerializer):\n    replies = serializers.SerializerMethodField()\n    user = serializers.HyperlinkedRelatedField(\n        view_name = \"user-detail\",\n        read_only = True,\n        lookup_field = 'pk'\n    )\n    book = serializers.HyperlinkedRelatedField(\n        view_name=\"book-detail\",",
         "detail": "loanBook.backend.serializer",
         "documentation": {}
     },
@@ -878,11 +1253,47 @@
         "documentation": {}
     },
     {
+        "label": "CommentBookViewSet",
+        "kind": 6,
+        "importPath": "loanBook.backend.views",
+        "description": "loanBook.backend.views",
+        "peekOfCode": "class CommentBookViewSet(viewsets.ModelViewSet):\n    queryset = Comment.objects.all()\n    serializer_class = CommentBookSerializer\n    def get_permissions(self):\n        if self.action in ['create', 'update', 'partial_update', 'destroy']:\n            return [permissions.IsAuthenticated()]\n        else:\n            return [permissions.AllowAny()]\n    def perform_create(self, serializer):\n        serializer.save(user=self.request.user)",
+        "detail": "loanBook.backend.views",
+        "documentation": {}
+    },
+    {
+        "label": "RatingBookViewSet",
+        "kind": 6,
+        "importPath": "loanBook.backend.views",
+        "description": "loanBook.backend.views",
+        "peekOfCode": "class RatingBookViewSet(viewsets.ModelViewSet):\n    queryset = Rating.objects.all()\n    serializer_class = RatingBookSerializer\n    permission_classes = [permissions.IsAuthenticated]\n    def perform_create(self, serializer):\n        serializer.save(user=self.request.user)\n    def update(self, request, *args, **kwargs):\n        instance = self.get_object()\n        if instance.user != request.user:\n            return Response({\"detail\": \"You do not have permission to update this rating.\"}, status=status.HTTP_403_FORBIDDEN)",
+        "detail": "loanBook.backend.views",
+        "documentation": {}
+    },
+    {
+        "label": "FavoriteBookUserViewSet",
+        "kind": 6,
+        "importPath": "loanBook.backend.views",
+        "description": "loanBook.backend.views",
+        "peekOfCode": "class FavoriteBookUserViewSet(viewsets.ModelViewSet):\n    queryset = FavoriteBookUser.objects.all()\n    serializer_class = FavoriteBookSerializer\n    permissions_class = [permissions.IsAuthenticated]\n    # J'ajoute un livre en favorie à partir de l'user connecté.\n    def perform_create(self, serializer):\n        serializer.save(user=self.request.user)\n    def destroy(self, request, *args, **kwargs):\n        instance = self.get_object()\n        if instance.user != request.user and not request.user.is_superuser:",
+        "detail": "loanBook.backend.views",
+        "documentation": {}
+    },
+    {
         "label": "BookViewSet",
         "kind": 6,
         "importPath": "loanBook.backend.views",
         "description": "loanBook.backend.views",
-        "peekOfCode": "class BookViewSet(viewsets.ModelViewSet):\n    queryset = Book.objects.all()\n    serializer_class = BookSerializer\n    def get_permissions(self):\n        if self.action in ['create','update','partial_update']:\n            return [IsAdminOrReadOnly(),IsSuperUser(), permissions.IsAuthenticated()]\n        elif self.action in [\"retrieve\",\"list\"]:\n            return [permissions.AllowAny()]\n        else:\n            return [permissions.IsAuthenticated()]",
+        "peekOfCode": "class BookViewSet(viewsets.ModelViewSet):\n    queryset = Book.objects.all()\n    serializer_class = BookSerializer\n    def get_permissions(self):\n        if self.action in ['create']:\n            # Pour créer, on pourrait envisager que seuls les utilisateurs authentifiés ou les superutilisateurs puissent créer des livres\n            return [permissions.IsAuthenticated(), IsSuperUser(), IsAdminOrReadOnly()]\n        elif self.action in ['update', 'partial_update']:\n            # Pour mettre à jour, on exige que l'utilisateur soit le propriétaire du livre ou un super-utilisateur\n            return [IsAdminOrSuperUserOrOwner()]",
+        "detail": "loanBook.backend.views",
+        "documentation": {}
+    },
+    {
+        "label": "BookVersionViewSet",
+        "kind": 6,
+        "importPath": "loanBook.backend.views",
+        "description": "loanBook.backend.views",
+        "peekOfCode": "class BookVersionViewSet(viewsets.ModelViewSet):\n    queryset = BookVersion.objects.all()\n    serializer_class = BookVersionSerializer\n    def get_permissions(self):\n        if self.action in ['create']:\n            # Pour créer, on pourrait envisager que seuls les utilisateurs authentifiés ou les superutilisateurs puissent créer des versions de livres\n            return [permissions.IsAuthenticated(), IsSuperUser(), IsAdminOrReadOnly()]\n        elif self.action in ['update', 'partial_update']:\n            # Pour mettre à jour, on exige que l'utilisateur soit le propriétaire du livre ou un super-utilisateur\n            return [IsBookOwnerOrSuperUser()]",
         "detail": "loanBook.backend.views",
         "documentation": {}
     },
@@ -891,7 +1302,7 @@
         "kind": 6,
         "importPath": "loanBook.backend.views",
         "description": "loanBook.backend.views",
-        "peekOfCode": "class CustomUserViewSet(viewsets.ModelViewSet):\n    queryset = CustomUser.objects.all()\n    serializer_class = CustomUserSerializer\n    lookup_field = 'id'\n    def get_permissions(self):\n        \"\"\"\n        Instantier et retourner la liste des permissions que cette vue requiert.\n        \"\"\"\n        if self.action in ['create']:\n            return [permissions.AllowAny()]",
+        "peekOfCode": "class CustomUserViewSet(viewsets.ModelViewSet):\n    queryset = CustomUser.objects.all()\n    serializer_class = CustomUserSerializer\n    lookup_field = 'pk'\n    def get_permissions(self):\n        if self.action in ['create']:\n            return [permissions.AllowAny()]\n        elif self.action in [\"retrieve\",\"list\"]:\n            return [IsSuperUser()]\n        elif self.action in ['update', 'partial_update', 'update_password','update_image_user']:",
         "detail": "loanBook.backend.views",
         "documentation": {}
     },
@@ -909,7 +1320,7 @@
         "kind": 6,
         "importPath": "loanBook.backend.views",
         "description": "loanBook.backend.views",
-        "peekOfCode": "class LogoutViewSet(APIView):\n    def post(self, request, format=None):\n        logout(request)\n        return Response({\"success\": \"Successfully logged out\"}, status=status.HTTP_200_OK)\n# class BorrowViewSet(viewsets.ModelViewSet):\n#     queryset = Borrow.objects.all()\n#     serializer_class = EmpruntSerializer\n#     authentication_classes = [TokenAuthentication]\n#     def get_queryset(self):\n#         if self.request.user.is_authenticated:",
+        "peekOfCode": "class LogoutViewSet(APIView):\n    def post(self, request, format=None):\n        logout(request)\n        return Response({\"success\": \"Successfully logged out\"}, status=status.HTTP_200_OK)\nclass DownloadBook(APIView):\n    authentication_classes = [TokenAuthentication]\n    def get(self, request, pk, file_type):\n        # Récupérer le livre par son ID\n        book = get_object_or_404(Book, pk=pk)\n        # Déterminer le chemin du fichier en fonction du type de fichier demandé",
         "detail": "loanBook.backend.views",
         "documentation": {}
     },
@@ -918,7 +1329,16 @@
         "kind": 6,
         "importPath": "loanBook.backend.views",
         "description": "loanBook.backend.views",
-        "peekOfCode": "class DownloadBook(APIView):\n    authentication_classes = [TokenAuthentication]\n    def get(self, request, pk):\n        # Récupérer le livre par son ID\n        book = get_object_or_404(Book, pk=pk)\n        # Chemin du fichier PDF\n        file_path = os.path.join(settings.MEDIA_ROOT, book.pdf_file.name)\n        # Debug: Afficher le chemin du fichier\n        print(f\"Chemin du fichier: {file_path}\")\n        # Vérifier que le fichier existe",
+        "peekOfCode": "class DownloadBook(APIView):\n    authentication_classes = [TokenAuthentication]\n    def get(self, request, pk, file_type):\n        # Récupérer le livre par son ID\n        book = get_object_or_404(Book, pk=pk)\n        # Déterminer le chemin du fichier en fonction du type de fichier demandé\n        if file_type == 'pdf':\n            file_path = os.path.join(settings.MEDIA_ROOT, book.pdf_file.name)\n            content_type = 'application/pdf'\n        elif file_type == 'audio':",
+        "detail": "loanBook.backend.views",
+        "documentation": {}
+    },
+    {
+        "label": "custom_404_view",
+        "kind": 2,
+        "importPath": "loanBook.backend.views",
+        "description": "loanBook.backend.views",
+        "peekOfCode": "def custom_404_view(request, exception=None):\n    response_data = {\n        \"error\": \"Page not found\",\n        \"status_code\": 404\n    }\n    return JsonResponse(response_data, status=404)",
         "detail": "loanBook.backend.views",
         "documentation": {}
     },
@@ -1116,7 +1536,7 @@
         "kind": 5,
         "importPath": "loanBook.loanBook.settings",
         "description": "loanBook.loanBook.settings",
-        "peekOfCode": "SECRET_KEY = 'django-insecure-&^vy!=yd1of*lif&w_e)wv%5#9!-vk@(jhv3za-7#@58ed^c*-'\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',",
+        "peekOfCode": "SECRET_KEY = 'django-insecure-&^vy!=yd1of*lif&w_e)wv%5#9!-vk@(jhv3za-7#@58ed^c*-'\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    # 'jet.dashboard',\n    'jet',\n    'django.contrib.admin',\n    'django.contrib.auth',",
         "detail": "loanBook.loanBook.settings",
         "documentation": {}
     },
@@ -1125,7 +1545,7 @@
         "kind": 5,
         "importPath": "loanBook.loanBook.settings",
         "description": "loanBook.loanBook.settings",
-        "peekOfCode": "DEBUG = True\nALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',",
+        "peekOfCode": "DEBUG = True\nALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    # 'jet.dashboard',\n    'jet',\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',",
         "detail": "loanBook.loanBook.settings",
         "documentation": {}
     },
@@ -1134,7 +1554,7 @@
         "kind": 5,
         "importPath": "loanBook.loanBook.settings",
         "description": "loanBook.loanBook.settings",
-        "peekOfCode": "ALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'backend',",
+        "peekOfCode": "ALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    # 'jet.dashboard',\n    'jet',\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',",
         "detail": "loanBook.loanBook.settings",
         "documentation": {}
     },
@@ -1143,7 +1563,7 @@
         "kind": 5,
         "importPath": "loanBook.loanBook.settings",
         "description": "loanBook.loanBook.settings",
-        "peekOfCode": "INSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'backend',\n    'rest_framework',\n    'rest_framework.authtoken',",
+        "peekOfCode": "INSTALLED_APPS = [\n    # 'jet.dashboard',\n    'jet',\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'backend',",
         "detail": "loanBook.loanBook.settings",
         "documentation": {}
     },
@@ -1287,7 +1707,7 @@
         "kind": 5,
         "importPath": "loanBook.loanBook.settings",
         "description": "loanBook.loanBook.settings",
-        "peekOfCode": "DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\n# Définir la durée de vie des tokens (par défaut : 30 jours)\nTOKEN_EXPIRATION = 30\n# Définir la durée de vie des tokens par rapport à l'heure actuelle (par défaut : timedelta(minutes=5))\nTOKEN_EXPIRATION_DELTA = timedelta(days=TOKEN_EXPIRATION)\nURL_REDIRECT_LOGIN = 'login/'\nAPPEND_SLASH=False\nAUTH_USER_MODEL = 'backend.CustomUser'",
+        "peekOfCode": "DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\n# Définir la durée de vie des tokens (par défaut : 30 jours)\nTOKEN_EXPIRATION = 30\n# Définir la durée de vie des tokens par rapport à l'heure actuelle (par défaut : timedelta(minutes=5))\nTOKEN_EXPIRATION_DELTA = timedelta(days=TOKEN_EXPIRATION)\nURL_REDIRECT_LOGIN = 'login/'\nAPPEND_SLASH=False\nAUTH_USER_MODEL = 'backend.CustomUser'\nJET_THEMES = [\n    {",
         "detail": "loanBook.loanBook.settings",
         "documentation": {}
     },
@@ -1296,7 +1716,7 @@
         "kind": 5,
         "importPath": "loanBook.loanBook.settings",
         "description": "loanBook.loanBook.settings",
-        "peekOfCode": "TOKEN_EXPIRATION = 30\n# Définir la durée de vie des tokens par rapport à l'heure actuelle (par défaut : timedelta(minutes=5))\nTOKEN_EXPIRATION_DELTA = timedelta(days=TOKEN_EXPIRATION)\nURL_REDIRECT_LOGIN = 'login/'\nAPPEND_SLASH=False\nAUTH_USER_MODEL = 'backend.CustomUser'",
+        "peekOfCode": "TOKEN_EXPIRATION = 30\n# Définir la durée de vie des tokens par rapport à l'heure actuelle (par défaut : timedelta(minutes=5))\nTOKEN_EXPIRATION_DELTA = timedelta(days=TOKEN_EXPIRATION)\nURL_REDIRECT_LOGIN = 'login/'\nAPPEND_SLASH=False\nAUTH_USER_MODEL = 'backend.CustomUser'\nJET_THEMES = [\n    {\n        'theme': 'default', # theme folder name\n        'color': '#47bac1', # color of the theme's button in user menu",
         "detail": "loanBook.loanBook.settings",
         "documentation": {}
     },
@@ -1305,7 +1725,7 @@
         "kind": 5,
         "importPath": "loanBook.loanBook.settings",
         "description": "loanBook.loanBook.settings",
-        "peekOfCode": "TOKEN_EXPIRATION_DELTA = timedelta(days=TOKEN_EXPIRATION)\nURL_REDIRECT_LOGIN = 'login/'\nAPPEND_SLASH=False\nAUTH_USER_MODEL = 'backend.CustomUser'",
+        "peekOfCode": "TOKEN_EXPIRATION_DELTA = timedelta(days=TOKEN_EXPIRATION)\nURL_REDIRECT_LOGIN = 'login/'\nAPPEND_SLASH=False\nAUTH_USER_MODEL = 'backend.CustomUser'\nJET_THEMES = [\n    {\n        'theme': 'default', # theme folder name\n        'color': '#47bac1', # color of the theme's button in user menu\n        'title': 'Default' # theme title\n    },",
         "detail": "loanBook.loanBook.settings",
         "documentation": {}
     },
@@ -1314,7 +1734,7 @@
         "kind": 5,
         "importPath": "loanBook.loanBook.settings",
         "description": "loanBook.loanBook.settings",
-        "peekOfCode": "URL_REDIRECT_LOGIN = 'login/'\nAPPEND_SLASH=False\nAUTH_USER_MODEL = 'backend.CustomUser'",
+        "peekOfCode": "URL_REDIRECT_LOGIN = 'login/'\nAPPEND_SLASH=False\nAUTH_USER_MODEL = 'backend.CustomUser'\nJET_THEMES = [\n    {\n        'theme': 'default', # theme folder name\n        'color': '#47bac1', # color of the theme's button in user menu\n        'title': 'Default' # theme title\n    },\n    {",
         "detail": "loanBook.loanBook.settings",
         "documentation": {}
     },
@@ -1323,7 +1743,25 @@
         "kind": 5,
         "importPath": "loanBook.loanBook.settings",
         "description": "loanBook.loanBook.settings",
-        "peekOfCode": "AUTH_USER_MODEL = 'backend.CustomUser'",
+        "peekOfCode": "AUTH_USER_MODEL = 'backend.CustomUser'\nJET_THEMES = [\n    {\n        'theme': 'default', # theme folder name\n        'color': '#47bac1', # color of the theme's button in user menu\n        'title': 'Default' # theme title\n    },\n    {\n        'theme': 'green',\n        'color': '#44b78b',",
+        "detail": "loanBook.loanBook.settings",
+        "documentation": {}
+    },
+    {
+        "label": "JET_THEMES",
+        "kind": 5,
+        "importPath": "loanBook.loanBook.settings",
+        "description": "loanBook.loanBook.settings",
+        "peekOfCode": "JET_THEMES = [\n    {\n        'theme': 'default', # theme folder name\n        'color': '#47bac1', # color of the theme's button in user menu\n        'title': 'Default' # theme title\n    },\n    {\n        'theme': 'green',\n        'color': '#44b78b',\n        'title': 'Green'",
+        "detail": "loanBook.loanBook.settings",
+        "documentation": {}
+    },
+    {
+        "label": "JET_SIDE_MENU_COMPACT",
+        "kind": 5,
+        "importPath": "loanBook.loanBook.settings",
+        "description": "loanBook.loanBook.settings",
+        "peekOfCode": "JET_SIDE_MENU_COMPACT = True",
         "detail": "loanBook.loanBook.settings",
         "documentation": {}
     },
@@ -1332,7 +1770,16 @@
         "kind": 5,
         "importPath": "loanBook.loanBook.urls",
         "description": "loanBook.loanBook.urls",
-        "peekOfCode": "router = routers.DefaultRouter()\nrouter.register(r'books', BookViewSet, basename=\"book\")\nrouter.register(r'users', CustomUserViewSet, basename='user')\nurlpatterns = [\n  path('',include(router.urls)),\n  path('admin/clearcache/', include('clearcache.urls')),\n  path('books/download/<str:pk>', DownloadBook.as_view()),\n  path('login/', LoginViewSet.as_view()),\n  path('logout/', LogoutViewSet.as_view()),\n  path('admin/', admin.site.urls)",
+        "peekOfCode": "router = routers.DefaultRouter()\nrouter.register(r'books', BookViewSet, basename=\"book\")\nrouter.register(r'bookversions', BookVersionViewSet, basename=\"bookversion\")\nrouter.register(r'favoritebookuser', FavoriteBookUserViewSet, basename=\"favoritebookuser\")\nrouter.register(r'ratingbook', RatingBookViewSet, basename=\"rating\")\nrouter.register(r'commentbook', CommentBookViewSet, basename=\"comment\")\nrouter.register(r'users', CustomUserViewSet, basename='user')\nhandler404 = custom_404_view\nurlpatterns = [\n  path('',include(router.urls)),",
+        "detail": "loanBook.loanBook.urls",
+        "documentation": {}
+    },
+    {
+        "label": "handler404",
+        "kind": 5,
+        "importPath": "loanBook.loanBook.urls",
+        "description": "loanBook.loanBook.urls",
+        "peekOfCode": "handler404 = custom_404_view\nurlpatterns = [\n  path('',include(router.urls)),\n  path('jet/', include('jet.urls', 'jet')),\n  # path('jet/dashboard/', include('jet.dashboard.urls', 'jet-dashboard')), \n  path('admin/clearcache/', include('clearcache.urls')),\n  path('books/download/<str:pk>', DownloadBook.as_view()),\n  path('login/', LoginViewSet.as_view()),\n  path('logout/', LogoutViewSet.as_view()),\n  path('admin/', admin.site.urls),",
         "detail": "loanBook.loanBook.urls",
         "documentation": {}
     },
@@ -1341,7 +1788,7 @@
         "kind": 5,
         "importPath": "loanBook.loanBook.urls",
         "description": "loanBook.loanBook.urls",
-        "peekOfCode": "urlpatterns = [\n  path('',include(router.urls)),\n  path('admin/clearcache/', include('clearcache.urls')),\n  path('books/download/<str:pk>', DownloadBook.as_view()),\n  path('login/', LoginViewSet.as_view()),\n  path('logout/', LogoutViewSet.as_view()),\n  path('admin/', admin.site.urls)\n]\nif settings.DEBUG:\n  urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)",
+        "peekOfCode": "urlpatterns = [\n  path('',include(router.urls)),\n  path('jet/', include('jet.urls', 'jet')),\n  # path('jet/dashboard/', include('jet.dashboard.urls', 'jet-dashboard')), \n  path('admin/clearcache/', include('clearcache.urls')),\n  path('books/download/<str:pk>', DownloadBook.as_view()),\n  path('login/', LoginViewSet.as_view()),\n  path('logout/', LogoutViewSet.as_view()),\n  path('admin/', admin.site.urls),\n]",
         "detail": "loanBook.loanBook.urls",
         "documentation": {}
     },

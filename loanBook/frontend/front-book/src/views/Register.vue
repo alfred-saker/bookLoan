@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <v-container>
-      <v-btn outlined class="mt-4 ml-4" :to="{ path: '/loanbook/dashboard_book_admin' }">
+      <v-btn outlined class="mt-4 ml-4" :to="{ path: '/loanbook/admin/dashboard_book_admin' }">
         Go to the homepage <v-icon>mdi-arrow-right</v-icon>
       </v-btn>
 
@@ -27,6 +27,7 @@
                   <v-col cols="12" md="6">
                     <v-text-field
                       v-model="last_name"
+                      variant="outlined"
                       label="Last Name"
                       :error-messages="errors.last_name"
                       outlined
@@ -36,6 +37,7 @@
                   <v-col cols="12" md="6">
                     <v-text-field
                       v-model="username"
+                      variant="outlined"
                       label="Username"
                       :error-messages="errors.username"
                       outlined
@@ -45,6 +47,7 @@
                   <v-col cols="12" md="6">
                     <v-text-field
                       v-model="email"
+                      variant="outlined"
                       label="Email"
                       :error-messages="errors.email"
                       outlined
@@ -55,6 +58,7 @@
                     <v-text-field
                       v-model="password"
                       label="Password"
+                      variant="outlined"
                       type="password"
                       :error-messages="errors.password"
                       outlined
@@ -65,6 +69,7 @@
                     <v-text-field
                       v-model="confirm_password"
                       label="Confirm Password"
+                      variant="outlined"
                       type="password"
                       :error-messages="errors.confirm_password"
                       outlined
@@ -84,7 +89,7 @@
           </v-card>
         </v-col>
       </v-row>
-      <Footer></Footer>
+      <!-- <Footer></Footer> -->
     </v-container>
   </v-app>
 </template>

@@ -21,7 +21,7 @@ urlpatterns = [
   path('books/download/<str:pk>', DownloadBook.as_view()),
   path('login/', LoginViewSet.as_view()),
   path('logout/', LogoutViewSet.as_view()),
-  path('admin/', admin.site.urls)
+  path('admin/', admin.site.urls),
 ]
 if settings.DEBUG:
   urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

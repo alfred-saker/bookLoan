@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <v-container>
-      <v-btn outlined class="mt-4 ml-4" :to="{ path: '/loanbook/dashboard_book_admin' }">
+      <v-btn outlined class="mt-4 ml-4" :to="{ path: '/loanbook/admin/dashboard_book_admin' }">
         Go to the homepage <v-icon>mdi-arrow-right</v-icon>
       </v-btn>
 
@@ -21,6 +21,7 @@
             <v-text-field
               v-model="username"
               label="Username"
+              variant="outlined"
               :error-messages="errors.username"
               outlined
               clearable
@@ -28,6 +29,7 @@
             <v-text-field
               v-model="password"
               label="Password"
+              variant="outlined"
               type="password"
               :error-messages="errors.password"
               outlined
@@ -44,7 +46,7 @@
         </v-card-actions>
       </v-card>
     </v-container>
-    <Footer></Footer>
+    <!-- <Footer></Footer> -->
   </v-app>
 </template>
 
@@ -87,7 +89,7 @@ export default {
           localStorage.setItem('url', url);
           localStorage.setItem('is_staff', is_staff);
           localStorage.setItem('success_login', 'Welcome in the universe of BookLoan 😎🥳');
-          this.$router.push('/loanbook/dashboard_book_admin');
+          this.$router.push('/loanbook/admin/dashboard_book_admin');
 
         } catch (error) {
           if (error.response && error.response.data) {
